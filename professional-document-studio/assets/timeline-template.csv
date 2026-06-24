@@ -1,0 +1,6 @@
+section,task,start,end,status,milestone,owner,notes
+准备,任务定义与资料盘点,2026-07-01,2026-07-07,planned,false,项目负责人,
+研究,来源检索与事实核验,2026-07-08,2026-07-21,planned,false,研究负责人,
+分析,分析框架与方案形成,2026-07-22,2026-08-04,planned,false,项目负责人,
+撰写,初稿与内部评审,2026-08-05,2026-08-18,planned,false,撰写负责人,
+交付,最终文件发布,2026-08-25,2026-08-25,planned,true,项目负责人,

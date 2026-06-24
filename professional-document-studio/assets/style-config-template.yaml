@@ -1,0 +1,18 @@
+page_size: A4
+east_asian_font: "宋体"
+latin_font: "Times New Roman"
+body_size_pt: 10.5
+line_spacing: 1.35
+heading_1_size_pt: 17
+heading_2_size_pt: 13.5
+heading_3_size_pt: 11.5
+heading_color: "#1F4E78"
+accent_color: "#D9EAF7"
+table_header_color: "#D9EAF7"
+text_color: "#202020"
+margin_top_cm: 2.3
+margin_bottom_cm: 2.2
+margin_left_cm: 2.4
+margin_right_cm: 2.4
+cover_page: true
+page_numbers: true

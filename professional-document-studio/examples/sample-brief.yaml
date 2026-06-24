@@ -1,0 +1,81 @@
+project:
+  name: "客户服务知识库升级"
+  owner: "项目办公室"
+  deadline: "2026-09-30"
+  version: "0.1"
+
+deliverable:
+  document_type: "project_proposal"
+  objective: "为管理层提供一份可批准、可执行的知识库升级方案。"
+  target_audience: "运营、客服与信息技术负责人"
+  use_context: "项目立项评审"
+  language: "zh-CN"
+  output_formats:
+    - docx
+  target_length: "8-12页"
+
+content_requirements:
+  mandatory_sections:
+    - 执行摘要
+    - 现状与问题
+    - 方案设计
+    - 实施计划
+    - 指标与风险
+  optional_sections:
+    - 预算假设
+  excluded_topics: []
+  number_of_options: 1
+  case_studies_required: false
+  timeline_required: true
+  risk_register_required: true
+
+inputs:
+  local_files: []
+  urls: []
+  notes: "本文件仅用于演示 Skill 的通用结构。"
+  authoritative_sources: []
+
+research:
+  live_web_required: false
+  source_priority:
+    - user_materials
+  prohibited_sources: []
+  cutoff_date: ""
+  citation_style: "source_table"
+
+visuals:
+  tables: true
+  charts: "as_needed"
+  gantt: true
+  process_diagram: false
+  decorative_images: false
+
+style:
+  page_size: A4
+  east_asian_font: "宋体"
+  latin_font: "Times New Roman"
+  body_size_pt: 10.5
+  line_spacing: 1.35
+  heading_color: "#1F4E78"
+  accent_color: "#D9EAF7"
+  cover_page: true
+  header_text: "知识库升级项目"
+  footer_text: "内部讨论稿"
+
+outputs:
+  final_docx: true
+  source_ledger: false
+  reusable_yaml: true
+  chart_images: true
+  internal_qa_pages: false
+
+constraints:
+  privacy: "演示内容，不含真实客户信息。"
+  budget: "不在演示中给出真实金额。"
+  legal_or_compliance: ""
+  other: ""
+
+assumptions:
+  - "现有知识库内容分散，检索效率和更新责任不清。"
+open_questions:
+  - "实际系统接口与预算需在真实项目中补充。"

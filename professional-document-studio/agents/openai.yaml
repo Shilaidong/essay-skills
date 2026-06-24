@@ -1,0 +1,6 @@
+interface:
+  display_name: "Professional Document Studio"
+  short_description: "Research, write, format, and QA polished DOCX reports"
+  default_prompt: "Use $professional-document-studio to turn the supplied requirements and materials into a well-researched, structured, visually polished document. Ask only one critical clarification question if necessary, generate the requested files, and render-inspect any DOCX before delivery."
+policy:
+  allow_implicit_invocation: true

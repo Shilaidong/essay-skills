@@ -1,0 +1,75 @@
+project:
+  name: ""
+  owner: ""
+  deadline: ""
+  version: "0.1"
+
+deliverable:
+  document_type: "strategy_report"
+  objective: ""
+  target_audience: ""
+  use_context: ""
+  language: "zh-CN"
+  output_formats:
+    - docx
+  target_length: ""
+
+content_requirements:
+  mandatory_sections: []
+  optional_sections: []
+  excluded_topics: []
+  number_of_options: 1
+  case_studies_required: false
+  timeline_required: false
+  risk_register_required: true
+
+inputs:
+  local_files: []
+  urls: []
+  notes: ""
+  authoritative_sources: []
+
+research:
+  live_web_required: true
+  source_priority:
+    - official
+    - primary_research
+    - institutional_report
+  prohibited_sources: []
+  cutoff_date: ""
+  citation_style: "source_table"
+
+visuals:
+  tables: true
+  charts: "as_needed"
+  gantt: false
+  process_diagram: false
+  decorative_images: false
+
+style:
+  page_size: A4
+  east_asian_font: "宋体"
+  latin_font: "Times New Roman"
+  body_size_pt: 10.5
+  line_spacing: 1.35
+  heading_color: "#1F4E78"
+  accent_color: "#D9EAF7"
+  cover_page: true
+  header_text: ""
+  footer_text: ""
+
+outputs:
+  final_docx: true
+  source_ledger: false
+  reusable_yaml: true
+  chart_images: false
+  internal_qa_pages: false
+
+constraints:
+  privacy: ""
+  budget: ""
+  legal_or_compliance: ""
+  other: ""
+
+assumptions: []
+open_questions: []

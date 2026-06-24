@@ -1,0 +1,96 @@
+document:
+  title: "示例专业报告"
+  subtitle: "可替换为项目副标题"
+  author: ""
+  client: ""
+  date: ""
+  version: "1.0"
+  confidentiality: ""
+  language: "zh-CN"
+
+style:
+  page_size: A4
+  east_asian_font: "宋体"
+  latin_font: "Times New Roman"
+  body_size_pt: 10.5
+  line_spacing: 1.35
+  heading_color: "#1F4E78"
+  accent_color: "#D9EAF7"
+  table_header_color: "#D9EAF7"
+  margin_top_cm: 2.3
+  margin_bottom_cm: 2.2
+  margin_left_cm: 2.4
+  margin_right_cm: 2.4
+  cover_page: true
+  page_numbers: true
+  header_text: ""
+  footer_text: ""
+
+executive_summary:
+  title: "执行摘要"
+  overview: "用一段话说明结论与背景。"
+  decisions:
+    - "核心决定或建议一"
+  priorities:
+    - "优先行动一"
+  risks:
+    - "主要风险一"
+
+sections:
+  - title: "1. 背景与范围"
+    level: 1
+    page_break_before: true
+    blocks:
+      - type: paragraph
+        text: "说明项目背景、目标读者和文档范围。"
+      - type: callout
+        label: "核心结论"
+        text: "用两到四句话表达本章最重要的信息。"
+
+  - title: "2. 分析"
+    level: 1
+    page_break_before: true
+    blocks:
+      - type: paragraph
+        text: "分析正文。"
+      - type: bullets
+        items:
+          - "要点一"
+          - "要点二"
+      - type: table
+        caption: "表1 方案比较"
+        headers:
+          - "维度"
+          - "方案A"
+          - "方案B"
+        rows:
+          - ["适用条件", "", ""]
+          - ["优势", "", ""]
+          - ["风险", "", ""]
+
+  - title: "3. 实施计划"
+    level: 1
+    page_break_before: true
+    blocks:
+      - type: image
+        path: "examples/sample-gantt.png"
+        caption: "图1 项目时间轴"
+        width_cm: 16.0
+      - type: numbered
+        items:
+          - "第一步"
+          - "第二步"
+
+sources:
+  title: "来源与说明"
+  entries:
+    - id: "S1"
+      citation: "机构或作者：《资料标题》，发布日期，访问日期。"
+      url: ""
+
+appendices:
+  - title: "附录A：待确认事项"
+    blocks:
+      - type: bullets
+        items:
+          - "待确认事项一"
