@@ -1,0 +1,2 @@
+id,institution,country,program_or_policy,claim,source_type,url_or_file,date_checked,confidence,notes
+S001,"Example University","US","Admissions testing","Testing policy requires current verification","official admissions page","","YYYY-MM-DD","medium","Replace with official source"

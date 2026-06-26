@@ -1,0 +1,2 @@
+claim,category,status,source_or_proof,date_checked,implication,follow_up,owner,deadline
+"Example: GPA 3.92/4.0","academic","STUDENT_REPORTED","student intake","","Need transcript verification","Upload transcript","student","YYYY-MM-DD"

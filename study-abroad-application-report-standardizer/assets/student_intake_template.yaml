@@ -1,0 +1,90 @@
+student:
+  name: ""
+  preferred_name: ""
+  citizenship_or_residency: "MISSING"
+  current_city_country: ""
+  current_school: ""
+  school_type: "MISSING" # public / international / boarding / IB / AP / A-Level / national curriculum / other
+  curriculum: "MISSING"
+  current_grade: ""
+  expected_graduation: "YYYY-MM"
+  target_entry: "YYYY Fall"
+
+academics:
+  gpa: "MISSING"
+  grading_scale: "MISSING"
+  rank_or_percentile: "MISSING"
+  transcript_files: []
+  current_courses: []
+  completed_advanced_courses: []
+  planned_courses: []
+  strengths: []
+  weak_points: []
+
+testing:
+  english:
+    exam: "IELTS/TOEFL/Duolingo/MISSING"
+    score: ""
+    sub_scores: {}
+    date: ""
+    target: ""
+  standardized:
+    exam: "SAT/ACT/GRE/GMAT/LSAT/MCAT/none/MISSING"
+    score: ""
+    sub_scores: {}
+    date: ""
+    attempts: ""
+    target: ""
+  curriculum_exams:
+    - name: "AP/IB/A-Level/National Exam"
+      subject: ""
+      score_or_predicted: ""
+      date: ""
+      status: "VERIFIED/STUDENT_REPORTED/TARGET"
+
+activities:
+  - name: ""
+    category: "research/leadership/service/competition/athletics/arts/work/internship/other"
+    role: ""
+    dates: ""
+    hours: ""
+    description: ""
+    outcomes: ""
+    proof: ""
+    status: "STUDENT_REPORTED"
+
+awards:
+  - name: ""
+    level: "school/local/regional/national/international"
+    date: ""
+    result: ""
+    proof: ""
+    status: "STUDENT_REPORTED"
+
+applications:
+  target_countries: []
+  degree_level: "undergraduate/graduate/transfer/high_school/other"
+  target_tier: ""
+  intended_majors: []
+  career_interests: []
+  budget_per_year: "MISSING"
+  financial_aid_need: "MISSING"
+  ed_ea_willingness: "MISSING"
+  geography_preferences: []
+  must_include_schools: []
+  must_exclude_schools: []
+
+materials:
+  uploaded_files: []
+  meeting_notes: ""
+  user_requested_format: "docx/pdf/markdown"
+  language: "zh-CN"
+  font: "宋体"
+  include_cases: false
+  include_gantt_image: true
+
+constraints:
+  time_available_per_week: "MISSING"
+  family_resources: ""
+  ethical_or_privacy_constraints: []
+  school_internal_deadlines: []
