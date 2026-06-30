@@ -1,0 +1,60 @@
+title: 申请规划甘特图示例（核心活动与竞赛路径通用版）
+start: 2026-06-26
+end: 2028-08-25
+tasks:
+  - section: 标化
+    label: SAT/ACT 暑期集训
+    start: 2026-07-06
+    end: 2026-08-10
+  - section: 标化
+    label: 首考报名决策
+    date: 2026-08-07
+    type: milestone
+  - section: 标化
+    label: 秋季主考窗口
+    date: 2026-10-03
+    type: milestone
+  - section: 学术
+    label: G11核心课GPA冲刺
+    start: 2026-09-01
+    end: 2027-01-15
+  - section: 学术
+    label: AP/IB/A-Level备考
+    start: 2026-09-01
+    end: 2027-05-15
+  - section: 核心项目
+    label: 主线项目数据/作品产出
+    start: 2026-06-26
+    end: 2026-09-30
+  - section: 核心项目
+    label: 对照实验/用户测试/作品迭代
+    start: 2026-09-01
+    end: 2026-11-30
+  - section: 核心活动与竞赛
+    label: 竞赛/活动材料准备
+    start: 2026-10-01
+    end: 2026-12-15
+  - section: 核心活动与竞赛
+    label: 初轮提交/报名
+    date: 2026-12-15
+    type: milestone
+  - section: 核心活动与竞赛
+    label: 晋级/面试/答辩窗口（如适用）
+    start: 2027-01-15
+    end: 2027-04-15
+  - section: 核心活动与竞赛
+    label: 决赛/发布/影响力报告
+    start: 2027-04-15
+    end: 2027-06-30
+  - section: 申请
+    label: Common App 主文书
+    start: 2027-07-01
+    end: 2027-09-15
+  - section: 申请
+    label: ED/EA/RD 递交
+    start: 2027-10-01
+    end: 2028-01-05
+  - section: 录取后
+    label: 签证与入学准备
+    start: 2028-05-15
+    end: 2028-08-25

@@ -1,0 +1,16 @@
+font:
+  east_asia: Microsoft YaHei
+  latin: Arial
+  body_size_pt: 10.5
+  title_size_pt: 18
+  heading1_size_pt: 15
+  heading2_size_pt: 12
+page:
+  margin_cm: 1.8
+colors:
+  heading: "2F75B5"
+  table_header: "D9EAF7"
+  table_border: "BFBFBF"
+paragraph:
+  line_spacing: 1.18
+  space_after_pt: 4
