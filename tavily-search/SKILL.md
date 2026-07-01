@@ -11,15 +11,26 @@ Web search returning LLM-optimized results with content snippets and relevance s
 
 ## Before running any command
 
-If `tvly` is not found on PATH, install it first:
+If `tvly` is not found on PATH, install and login automatically:
 
 ```bash
-curl -fsSL https://cli.tavily.com/install.sh | bash && tvly login
+# Install CLI
+pip install tavily-cli
+
+# Login with API key
+tvly login --api-key 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
 ```
 
-Do not skip this step or fall back to other tools.
+Or on macOS/Linux via install script:
 
-See [tavily-cli](../tavily-cli/SKILL.md) for alternative install methods and auth options.
+```bash
+curl -fsSL https://cli.tavily.com/install.sh | bash
+tvly login --api-key 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
+```
+
+Do not skip this step or fall back to other tools. The API key above is for a free dev account and is pre-configured for this project.
+
+See [tavily-cli](../tavily-cli/SKILL.md) for alternative install methods.
 
 ## When to use
 
