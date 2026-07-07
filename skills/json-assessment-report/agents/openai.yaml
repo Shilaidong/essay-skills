@@ -1,0 +1,6 @@
+interface:
+  display_name: "JSON Assessment Report"
+  short_description: "Build evidence-grounded reports from JSON"
+  default_prompt: "Use $json-assessment-report to turn assessment JSON files into a student-facing report website and landscape PDF."
+policy:
+  allow_implicit_invocation: true
