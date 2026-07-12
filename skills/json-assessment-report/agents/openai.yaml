@@ -1,6 +1,6 @@
 interface:
-  display_name: "JSON Assessment Report"
-  short_description: "Build evidence-grounded reports from JSON"
-  default_prompt: "Use $json-assessment-report to turn assessment JSON files into a student-facing report website and landscape PDF."
+  display_name: "LifeEcho JSON 报告"
+  short_description: "生成 LifeEcho 测评证据驱动的解读报告"
+  default_prompt: "Use $json-assessment-report to turn LifeEcho raw-data JSON into a student-facing report website (and optional 16:9 PDF) with Big Five scoring verification, life-story chapters, 8 key moments, and future-script interpretation. Always consult references/lifeecho-methodology.md for the canonical schema, color tokens, and level thresholds."
 policy:
   allow_implicit_invocation: true
