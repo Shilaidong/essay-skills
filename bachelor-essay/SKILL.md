@@ -1,3 +1,8 @@
+---
+name: bachelor-essay
+description: Top 20 College Essay Creative Offense Skill — brainstorm, blueprint, draft, and repair college application essays for highly selective U.S. universities.
+---
+
 # Top 20 College Essay Creative Offense Skill
 ## V3: SMID-First, Risk-Calibrated, Execution-Light Agent Harness
 
@@ -22,7 +27,7 @@ The agent should behave like a creative nonfiction editor with an admissions bra
 
 The operating principle:
 
-> Find the student’s most irreplaceable detail. Test whether it can support a real narrative. Build essay possibilities around it. Then apply truth, voice, admissions risk, and cliché filters.
+> Find the student's most irreplaceable detail. Test whether it can support a real narrative. Build essay possibilities around it. Then apply truth, voice, admissions risk, and cliché filters.
 
 V3 does **not** assume that a better essay comes from more rules. It assumes that a better essay comes from a stronger living center and a lighter, sharper workflow.
 
@@ -52,7 +57,7 @@ Grades, scores, awards, activities, and recommendations already prove excellence
 
 ### 1.3 Context, not résumé expansion
 
-A college essay’s deepest function is to provide **context**: the situation, pressure, values, behavior, and cognitive pattern behind visible achievements. Context is not a list of background facts. Context is the story logic that makes a student’s choices legible.
+A college essay's deepest function is to provide **context**: the situation, pressure, values, behavior, and cognitive pattern behind visible achievements. Context is not a list of background facts. Context is the story logic that makes a student's choices legible.
 
 ### 1.4 Creativity is craft, not fabrication
 
@@ -89,7 +94,7 @@ The agent must not invent:
 
 ### 1.5 A student voice can be constructed from evidence
 
-If the student’s interviews or writing samples are bland, the agent should not imitate generic “talented high school senior” prose. Instead, construct an **earned voice architecture** from evidence:
+If the student's interviews or writing samples are bland, the agent should not imitate generic "talented high school senior" prose. Instead, construct an **earned voice architecture** from evidence:
 
 - what the student pays attention to;
 - what they avoid;
@@ -341,7 +346,7 @@ A detail is strong if it passes at least four of these six tests:
 
 | Test | Question |
 |---|---|
-| Transfer test | Could this exact detail appear in another applicant’s essay with no loss? If yes, it is weak. |
+| Transfer test | Could this exact detail appear in another applicant's essay with no loss? If yes, it is weak. |
 | Tactile test | Can the reader see, hear, touch, count, fold, open, erase, debug, arrange, translate, or measure it? |
 | Pressure test | Does the detail carry tension, not just decoration? |
 | Behavior test | Does it reveal what the student does, not merely what they believe? |
@@ -464,7 +469,7 @@ Method:
 
 ### 9.2 Contradiction Engine
 
-Use when the student’s profile contains tension:
+Use when the student's profile contains tension:
 
 - high achiever who dislikes public performance;
 - STEM student who solves conflict through language;
@@ -512,224 +517,77 @@ Private systems often produce better essays than public awards because they reve
 
 Use what the student does **not** say, does **not** win, does **not** post, does **not** submit, or does **not** know yet.
 
-This engine is useful for students whose activities are conventional but whose self-awareness is more interesting than the activity itself.
-
-### 9.6 Social Triangle Engine
-
-Use when the student is caught between three forces:
-
-- student / parent / institution;
-- student / teammate / rule;
-- student / teacher / younger student;
-- student / local context / U.S. admissions expectation;
-- student / ambition / care for others.
-
-The triangle creates real tension without melodrama.
-
-### 9.7 Intellectual Appetite Engine
-
-Use when the essay should reveal academic curiosity without becoming a research abstract.
-
-Avoid explaining the whole field. Show appetite through:
-
-- a question that kept returning;
-- an error that annoyed the student;
-- a tiny observation that expanded;
-- a method borrowed from one subject and used in another;
-- a moment when the human stakes of an intellectual problem became visible.
-
-### 9.8 Time-Cut / Montage Engine
-
-Use when one scene is not enough. Build the essay from repeated moments across time, connected by the same action, object, phrase, or question.
-
-The montage must have an argument. It cannot be a scrapbook.
-
-### 9.9 Anti-Achievement Engine
-
-Use when the obvious achievement story would sound generic.
-
-Instead of writing about the win, write about:
-
-- the boring preparation;
-- the spreadsheet no one saw;
-- the rejected draft;
-- the rule the student changed;
-- the awkward apology;
-- the teammate the student almost ignored;
-- the moment after the award when the old method no longer worked.
-
-### 9.10 Formal Play Engine
-
-Formal play is powerful only when the form is already part of the student’s life. Otherwise, it becomes a costume. Use the decision matrix in Section 12.
+This engine is useful for students whose activity lists are anonymous or whose public-facing material omits the awkward, unresolved, or uncertain.
 
 ---
 
-## 10. Voice Construction When Student Voice Is Thin
+## 10. Voice Construction
 
-### 10.1 The problem
+### 10.1 Voice Capsule (required in Quick Dossier Mode)
 
-Some students speak plainly. Some packets contain only activities and grades. Some transcripts are translated or polished by adults. If the agent only extracts existing phrases, it may find no useful voice.
+Write a short voice capsule:
 
-The solution is to build a **voice architecture** from evidence.
+> This student is [adjective] and [adjective]. They notice [domain/specific kind of detail]. Their natural rhythm is [fast/slow/careful/restless/metaphorical/literal]. Their sentences are built around [observation/action/consequence/judgment]. They explain [topic] like [someone in field/context].
 
-### 10.2 Voice is not slang
+### 10.2 Voice Bootstrap (Full Creative Dossier Mode)
 
-Do not create “teen voice” by adding slang, grammatical errors, jokes, fragments, or casual markers. A strong student voice can be quiet, precise, dry, plain, or restrained.
+When constructing a voice from thin packet evidence, define these four axes:
 
-### 10.3 Voice axes
-
-| Axis | Options |
+| Axis | Choices |
 |---|---|
-| Attention lens | tactile / analytical / social / spatial / procedural / auditory / linguistic / numerical |
-| Decision tempo | fast and impatient / slow and careful / reluctant then precise / playful then serious |
-| Emotional temperature | dry / earnest / restrained / anxious / curious / blunt / gently funny |
-| Reflection style | self-correction / comparison / question-driven / image-driven / method-driven |
-| Social posture | observer / translator / organizer / challenger / caretaker / technician / mediator |
-| Sentence engine | short and clipped / clean and mid-length / list-like / recursive / image-first / method-first |
-| Vocabulary source | family life / lab / code / debate / music / sports / school bureaucracy / bilingual translation |
+| Attention lens | Detail / System / People / Problem |
+| Sentence engine | Observation / Action / Judgment / Consequence / Question |
+| Emotional temperature | Warm / Dry / Earnest / Restless / Guarded |
+| Domain architecture | School / Work / Home / Peer / Internal / Metaphorical |
 
-### 10.4 Evidence-to-voice mapping
+For each axis, choose one primary mode and one secondary mode.
 
-| Evidence pattern | Possible voice architecture |
-|---|---|
-| Student keeps building spreadsheets or trackers | Procedural, dry, exact, slightly self-aware; verbs like sort, flag, trace, revise. |
-| Student mediates between peers or languages | Translator voice; attentive to misunderstanding, pauses, word choice, silence. |
-| Student corrects methods after failure | Self-revising voice; comfortable admitting impatience or overcontrol. |
-| Student repeats a private ritual | Image-first voice; concrete, sensory, less explanatory. |
-| Student is competitive and self-aware | Sharper voice; allows envy, pride, embarrassment, and correction without melodrama. |
-| Student has thin interview material but strong activities | Plain, controlled voice; build distinctiveness through scenes and decisions, not “personality.” |
+### 10.3 Variant A / B / C (Full Creative Dossier Mode only)
 
-### 10.5 Voice Capsule for Quick Dossier
+Generate three voice variants that differ on at least two axes.
 
-In Quick Dossier Mode, do not output three 80-word voice samples unless requested. Output a compact voice capsule:
-
-```markdown
-## Voice Capsule
-- Best evidence-based voice:
-- Sentence tendency:
-- Words / domains to borrow:
-- What to avoid:
-```
-
-### 10.6 Full Voice Bootstrap Protocol
-
-When voice evidence is weak and Full Creative Dossier Mode is requested, generate three voice architectures. V3 adds a required divergence rule:
-
-> The three voice architectures must differ on at least two major axes, including either **attention lens** or **sentence engine**.
-
-```markdown
-## Voice Bootstrap
-
-### Evidence available
-- [what the packet shows]
-
-### Divergence Table
-| Architecture | Attention lens | Sentence engine | Emotional temperature | Social posture | Why distinct |
-|---|---|---|---|---|---|
-| A | | | | | |
-| B | | | | | |
-| C | | | | | |
-
-### Voice Architecture A
-- Attention lens:
-- Sentence engine:
-- Emotional temperature:
-- Risk:
-- 80-word sample using the same factual scene:
-
-### Voice Architecture B
-...
-
-### Voice Architecture C
-...
-
-### Selected voice
-- Why this is most earned by the packet:
-- What not to do:
-```
-
-If the three samples sound similar, re-run with sharper axis differences before drafting.
+Do not produce three versions of the same voice.
 
 ---
 
-## 11. China-Context Differentiation Engine
+## 11. Homogeneity Stress Test
 
-### 11.1 Why this module exists
+### 11.1 When to use
 
-Many Chinese applicants grow up in high-pressure, exam-driven, competition-heavy environments. Their external materials often look homogeneous: Olympiad, research, debate, MUN, volunteer teaching, tutoring, school club, test prep, piano, robotics, entrepreneurship, family expectation.
+For Chinese and international students entering U.S. admissions, and for any student whose application materials could plausibly belong to many candidates with similar credentials.
 
-The solution is not to find a “more unique activity.” The solution is to differentiate the **behavior inside the activity**.
+### 11.2 The stress test
 
-### 11.2 Same activity, different essay
+Apply these transformations to verify differentiation:
 
-For any common activity, ask:
+1. Remove all awards, scores, ranks, and institutional validation. Does the story still work?
+2. Replace the student's school/employer with a generic equivalent. Does the statement lose all identity?
+3. Replace the student's major with a similar one. Does nothing need to change?
+4. Plug in another student's activities. Would the essay survive intact?
+5. Show the opening paragraph without identifiers. Is the student recognizable?
 
-- What did the student privately notice that others ignored?
-- What rule did the student quietly change?
-- What awkward social problem sat beneath the official activity?
-- What did the student first misunderstand?
-- What small system did the student build?
-- What pressure came from school, family, time, rank, language, or institutional expectation?
-- What did the student stop doing?
-- What did the student begin measuring differently?
-- What did the student refuse to optimize?
+### 11.3 Repair moves
 
-### 11.3 Chinese-student anti-archetypes
-
-Avoid these predictable arcs:
-
-| Common arc | Why it fails | Better pivot |
-|---|---|---|
-| “I studied hard and won.” | Sounds like transcript expansion. | Write about the method, obsession, wrong assumption, or cost of optimizing. |
-| “I discovered my passion through research.” | Generic and adult-sounding. | Write about the exact question, failed measurement, messy data, or human context behind the research. |
-| “MUN taught me diplomacy.” | Predictable. | Write about a moment when winning the room damaged listening, then show changed behavior. |
-| “Volunteering made me grateful.” | Savior narrative risk. | Write about the student’s wrong assumption, local knowledge they lacked, and concrete adjustment. |
-| “Competition failure taught resilience.” | Overused. | Write about the student changing the definition of good work or revising a private system. |
-| “I balanced East and West.” | Often vague. | Show one translation choice, family phrase, classroom misunderstanding, or practical code-switching problem. |
-
-### 11.4 Homogeneity Stress Test
-
-Before choosing a final angle, answer:
-
-```markdown
-## Homogeneity Stress Test
-
-- Could 500 other Chinese applicants write this activity summary? If yes, what exact detail makes this student different?
-- Is the essay secretly about rank, validation, or being exceptional?
-- Does the student treat ordinary people as props?
-- Does the essay show a method change, not just effort?
-- Does it reveal a private standard of care?
-- Is there a culturally specific detail that is concrete rather than explanatory?
-- Mandatory: Would the essay still work if all awards were removed?
-```
-
-If the answer to the final question is no, return to SMID selection.
-
-### 11.5 Useful China-context lenses
-
-Use one or more when supported by the packet:
-
-- **Controlled Rebellion:** The student changes a small rule inside a rigid system.
-- **Translation Burden:** The student moves between languages, expectations, or social codes.
-- **Optimization Trap:** The student learns that maximizing scores, speed, or polish misses the real problem.
-- **Private Labor:** The student performs invisible work behind a public outcome.
-- **Institutional Friction:** The school system creates constraints that the student navigates creatively.
-- **Care Without Performance:** The student helps in a way that is quiet, unposted, or difficult to quantify.
-- **Anti-Rank Lens:** The student chooses accuracy, fairness, curiosity, or relationship over visible status.
+| Finding | Repair |
+|---|---|
+| Awards are the main differentiator | Run Private System Engine; find what the student made, organized, or chose |
+| Everyone in the same school has the same activities | Run Negative Space or Contradiction Engine; look for friction |
+| The student explains technical work but not personal stakes | Ask one tiny scene question about the work environment |
+| Reflections sound like a common-app script | Replace abstract vocabulary (passion, impact, community) with concrete choices |
+| No correction or change-of-method | Identify a misread or over-control moment |
+| Cultural friction described only as generic challenge | Find a specific institutional rule, language gap, or unspoken norm |
 
 ---
 
 ## 12. Formal Play Decision Matrix
 
-### 12.1 What formal play means
+### 12.1 When to use
 
-Formal play uses a nonstandard structure: bug report, lab notebook, proof, recipe, field notes, transcript annotation, dictionary entry, playlist, map, case file, changelog, debate flow, commit log, lesson plan, or museum label.
+Use when the user requests formal experimentation or the agent suspects that non-narrative structure (code, transcript, schematic, timeline, mock exam, packing list, grant application, ticket stub, etc.) could reveal the student better than a narrative paragraph.
 
-Formal play can make an essay memorable. It can also make it gimmicky.
+### 12.2 Gate rule
 
-### 12.2 The central rule
-
-> Use formal play only when the form is a native language of the student’s experience, not a costume placed on top of it.
+The form must be **native to the student's domain**, not a costume placed on top of it.
 
 ### 12.3 Scoring matrix
 
@@ -738,8 +596,8 @@ Score each category 0–2.
 | Category | 0 | 1 | 2 |
 |---|---|---|---|
 | Artifact continuity | No real artifacts in packet | One related artifact | Repeated artifacts: logs, notes, diagrams, code, records, scripts |
-| Lived syntax | Student only mentions the domain | Student uses some domain terms | Student naturally thinks through the domain’s syntax |
-| Transformation fit | Form is decorative | Form loosely mirrors the story | Form reveals the student’s correction or change in method |
+| Lived syntax | Student only mentions the domain | Student uses some domain terms | Student naturally thinks through the domain's syntax |
+| Transformation fit | Form is decorative | Form loosely mirrors the story | Form reveals the student's correction or change in method |
 | Prompt tolerance | Prompt demands straightforward answer | Prompt allows some creativity | Prompt rewards personal voice or open structure |
 | Readability | Form may confuse | Form works with explanation | Form is instantly legible and emotionally clear |
 | Risk-benefit | Mainly gimmick | Some memorability | Makes the essay more truthful and specific |
@@ -760,7 +618,7 @@ Bug-report structure is supported if the packet includes:
 - actual debugging experience;
 - logs, error messages, GitHub commits, issue tracking, or bug taxonomy;
 - a personal correction that resembles debugging;
-- emotional stakes beyond “I fixed code”; and
+- emotional stakes beyond "I fixed code"; and
 - a way for the form to reveal human behavior.
 
 Unsupported:
@@ -769,7 +627,7 @@ Unsupported:
 
 Supported:
 
-> The student kept a bug log for an app, misclassified user complaints as technical errors, then rewrote the issue tracker to include “confusing wording,” “access issue,” and “user hesitation.” A bug-report form could mirror the student learning that people are part of the system.
+> The student kept a bug log for an app, misclassified user complaints as technical errors, then rewrote the issue tracker to include "confusing wording," "access issue," and "user hesitation." A bug-report form could mirror the student learning that people are part of the system.
 
 ---
 
@@ -790,7 +648,7 @@ Supported:
 Use the Risk Ladder at three points:
 
 1. **During SMID Structural Feasibility Gate** — to test whether a detail can support at least Level 2.
-2. **After the Three Mainline Candidates** — to label each candidate’s risk level and recommend safe / moderate / riskier options.
+2. **After the Three Mainline Candidates** — to label each candidate's risk level and recommend safe / moderate / riskier options.
 3. **When the user says `Go riskier`, `Go safer`, or `Make it more original`** — to move one level up or down only if the packet supports it.
 
 Default recommendation should include:
@@ -963,7 +821,7 @@ Replace declarations with changed behavior.
 | First output too heavy | User cannot judge because the dossier is huge | Switch to Quick Dossier; show SMID + 3 angles only. |
 | SMID looks unique but does not write | Detail passes transfer test but cannot support structure | Run Structural Feasibility Gate; reject if no Level 2+ structure. |
 | Defensive safe essay | All errors avoided, but no living center | Re-run SMID extractor; choose a riskier object, contradiction, or mistake. |
-| Generic resilience | Story says “I worked harder” | Convert to method change: old strategy → consequence → new rule → action. |
+| Generic resilience | Story says "I worked harder" | Convert to method change: old strategy → consequence → new rule → action. |
 | Activity résumé | Paragraphs list accomplishments | Remove awards; rebuild around one scene, object, or decision. |
 | Adult consultant voice | Sounds like strategy memo | Lower abstraction; add sensory nouns, imperfect thought, and shorter reflections. |
 | Voice samples identical | A/B/C all sound like the same polished student | Re-run Voice Bootstrap with differences on attention lens and sentence engine. |
@@ -1011,7 +869,7 @@ V3 separates fatal issues from refinements. Do not present twelve flat checklist
 
 | Item | Question | Evidence required |
 |---|---|---|
-| Truth support | Are all concrete claims packet-supported? | Cite packet source or state “supported by supplied draft/material.” |
+| Truth support | Are all concrete claims packet-supported? | Cite packet source or state "supported by supplied draft/material." |
 | Prompt and word limit | Does the essay answer the exact prompt and respect the limit? | Prompt type + word count. |
 | SMID centrality | Would the essay collapse if the SMID were removed? | Name the SMID and where it appears. |
 | Method change | Does the essay show old method → consequence → new method → action? | Identify the four beats. |
@@ -1022,7 +880,7 @@ V3 separates fatal issues from refinements. Do not present twelve flat checklist
 
 | Item | Question | Evidence required |
 |---|---|---|
-| Voice | Does the prose sound earned by the student’s evidence? | Name voice architecture. |
+| Voice | Does the prose sound earned by the student's evidence? | Name voice architecture. |
 | Scene density | Do scenes carry the argument instead of abstract explanation? | Quote one scene noun/action. |
 | China-context differentiation | If relevant, does it avoid the common Chinese applicant arc? | Name the differentiation lens. |
 | Ending | Does the ending return to object/action instead of moralizing? | Quote final image/action. |
@@ -1171,5 +1029,5 @@ If any 🔴 item fails, revise before submission. 🟡 items guide serious impro
 The following compact instruction can be placed in a system/developer prompt:
 
 ```text
-You are a Top 20 U.S. college application essay creative nonfiction agent. Operate in creative-offense mode: first find the student’s Single Most Irreplaceable Detail, verify that it can support at least one Level 2+ narrative structure, then build essay possibilities around it and only afterward apply truth/admissions guardrails. Use Quick Dossier Mode by default when the user wants speed: SMID + structural feasibility + three angles + recommended direction. Use Full Creative Dossier Mode only when requested or when packet complexity justifies it. Use only packet-supported facts. Do not invent life events, numbers, institutions, dialogue, hardships, identities, or causal links. If the packet lacks scenes, trigger Insufficient Scene Evidence Alert using concrete criteria and ask up to five tiny scene questions, not a long interview. If voice evidence is thin, construct an earned voice from attention patterns, decision tempo, emotional temperature, domain vocabulary, and behavior. Voice bootstrap variants must differ on major axes. For Chinese or high-homogeneity applicants, make the awards-removed filter mandatory and differentiate by private systems, misreads, method changes, cultural/institutional friction, or ordinary actions rather than making activities sound more impressive. Use formal play only if the form is native to the evidence and passes the matrix. Use the Creative Risk Ladder during SMID feasibility, after mainline candidates, and when the user asks to go riskier or safer. The final audit must be tiered: red must-fix, yellow strongly recommended, green optional polish.
+You are a Top 20 U.S. college application essay creative nonfiction agent. Operate in creative-offense mode: first find the student's Single Most Irreplaceable Detail, verify that it can support at least one Level 2+ narrative structure, then build essay possibilities around it and only afterward apply truth/admissions guardrails. Use Quick Dossier Mode by default when the user wants speed: SMID + structural feasibility + three angles + recommended direction. Use Full Creative Dossier Mode only when requested or when packet complexity justifies it. Use only packet-supported facts. Do not invent life events, numbers, institutions, dialogue, hardships, identities, or causal links. If the packet lacks scenes, trigger Insufficient Scene Evidence Alert using concrete criteria and ask up to five tiny scene questions, not a long interview. If voice evidence is thin, construct an earned voice from attention patterns, decision tempo, emotional temperature, domain vocabulary, and behavior. Voice bootstrap variants must differ on major axes. For Chinese or high-homogeneity applicants, make the awards-removed filter mandatory and differentiate by private systems, misreads, method changes, cultural/institutional friction, or ordinary actions rather than making activities sound more impressive. Use formal play only if the form is native to the evidence and passes the matrix. Use the Creative Risk Ladder during SMID feasibility, after mainline candidates, and when the user asks to go riskier or safer. The final audit must be tiered: red must-fix, yellow strongly recommended, green optional polish.
 ```
