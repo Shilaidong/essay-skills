@@ -7,6 +7,5 @@ tvly login --api-key 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
 # MiniMax CLI
 & "$PSScriptRoot\minimax-cli\scripts\setup.ps1"
 
-# SenseNova Skills (infographic generation)
-& "$PSScriptRoot\sn-image-base\scripts\setup.ps1"
-Write-Host "SenseNova skills ready: sn-image-base + sn-infographic"
+# SenseNova Skills (all 28 skills)
+& "$PSScriptRoot\sensenova\scripts\setup.ps1"
