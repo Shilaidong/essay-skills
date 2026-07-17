@@ -2,7 +2,7 @@
 name: infographic-generation
 description: |
   使用 SenseNova U1 Fast 模型生成信息图（Infographics）。适用于海报、知识卡片、菜谱、简历、演示文稿、数据可视化等含文字的高密度视觉布局。触发关键词：信息图、infographic、海报、知识卡片、菜谱图、简历图、信息图表、图文排版、视觉布局。不要用于普通图片生成（用 MiniMax 的 mmx image）。
-compatibility: Requires Python with `openai` and `requests` packages, and a Sensenova API key from platform.sensenova.cn.
+compatibility: Requires Python with `openai` and `requests` packages.
 allowed-tools: Bash(python scripts/generate.py *)
 ---
 
@@ -15,8 +15,6 @@ allowed-tools: Bash(python scripts/generate.py *)
 ```bash
 pip install openai requests
 ```
-
-API Key 需设置环境变量 `SENSENOVA_API_KEY`，或在 `scripts/generate.py` 中直接填入。
 
 ## 使用方法
 
@@ -60,4 +58,3 @@ python scripts/generate.py --prompt "<信息图描述>" --output "<输出文件>
 - Endpoint: `POST /v1/images/generations`
 - Model: `sensenova-u1-fast`
 - Base URL: `https://token.sensenova.cn/v1`
-- Auth: Bearer token in `Authorization` header
