@@ -1,7 +1,9 @@
 #!/bin/bash
-# Tavily Skill Setup - run this on a new machine after cloning
+# Skill Setup - run this on a new machine after cloning
 
 set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Install Tavily CLI
 if command -v pip3 &>/dev/null; then
@@ -19,4 +21,7 @@ fi
 # Login with API key
 tvly login --api-key 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
 
-echo "Tavily CLI installed and authenticated. Skills ready to use."
+# MiniMax CLI
+bash "$SCRIPT_DIR/minimax-cli/scripts/setup.sh"
+
+echo "All skills installed and configured."
