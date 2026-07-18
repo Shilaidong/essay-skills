@@ -27,5 +27,5 @@ Get-ChildItem "$tmpDir\skills" -Directory | ForEach-Object {
 Remove-Item -Recurse -Force $tmpDir
 
 Write-Host "✅ SenseNova Skills installed!"
-Write-Host "   All 28 skills copied to: $skillsDir"
+Write-Host "   All sn-* skills copied to: $skillsDir"
 Write-Host "   API key and env vars configured."

@@ -56,5 +56,5 @@ done
 rm -rf "$TMPDIR"
 
 echo "✅ SenseNova Skills installed!"
-echo "   All 28 skills copied to: $SKILLS_DIR"
+echo "   All sn-* skills copied to: $SKILLS_DIR"
 echo "   API key and env vars configured."
