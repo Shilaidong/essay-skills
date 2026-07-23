@@ -48,6 +48,22 @@ If `playwright` is available in a bundled runtime but not in the local project, 
 
 If the page needs custom fixes, add a CSS file and pass `--css custom-print.css`.
 
+### Linux headless Chromium
+
+On Linux Cloud Agents, headless Chromium's PDF compositor can mishandle `filter: blur()`, `backdrop-filter`, and `background-clip: text`. Symptoms include gray rectangles behind blurred echoes, glass cards, or gradient titles even when the HTML preview looks correct.
+
+`export_landscape_pdf.mjs` auto-injects `scripts/print-fix.linux.css` on Linux. That file:
+
+- removes blur from `.echo-*` / `.echo-wave`
+- replaces glass/backdrop layers with solid white cards
+- converts gradient titles to solid `#005049` text
+
+Do not `<link>` `print-fix.linux.css` into the report HTML. Keep it PDF-only.
+
+To disable the auto-fix (for debugging): pass `--no-linux-fix`.
+
+The exporter also waits for `document.fonts.ready` and an extra 800ms settle time before `page.pdf()` so webfonts finish loading.
+
 ## PDF QA
 
 Check:
@@ -60,6 +76,7 @@ Check:
 - No section heading sits alone at the bottom of a page.
 - No obvious empty page appears between content pages.
 - The PDF does not contain forbidden wording or internal agent notes.
+- On Linux exports, no gray blocks appear behind blur, glass, or gradient-text layers.
 
 Use Poppler when available:
 
