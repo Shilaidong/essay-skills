@@ -137,4 +137,5 @@ For PDF:
 - Export from the verified page.
 - Use screen-like 16:9 PDF when the user asks for computer-view or 1080P.
 - Use A4 only when the user asks for printable documents.
+- On Linux, rely on `export_landscape_pdf.mjs` to auto-apply `scripts/print-fix.linux.css` when blur/glass/gradient-text artifacts appear in the PDF.
 - Render sample pages for QA before final delivery.

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from "node:fs";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { createRequire } from "node:module";
 import Module from "node:module";
 
@@ -17,17 +17,22 @@ if (process.env.NODE_PATH) {
 }
 
 const require = createRequire(import.meta.url);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const LINUX_PRINT_FIX_CSS = path.join(__dirname, "print-fix.linux.css");
 
 function parseArgs(argv) {
   const out = {
     width: 1920,
     height: 1080,
     screenReport: false,
+    noLinuxFix: false,
   };
   for (let i = 2; i < argv.length; i++) {
     const arg = argv[i];
     if (arg === "--screen-report") {
       out.screenReport = true;
+    } else if (arg === "--no-linux-fix") {
+      out.noLinuxFix = true;
     } else if (arg.startsWith("--")) {
       const key = arg.slice(2).replace(/-([a-z])/g, (_, c) => c.toUpperCase());
       const value = argv[++i];
@@ -38,7 +43,7 @@ function parseArgs(argv) {
     }
   }
   if (!out.input || !out.output) {
-    throw new Error("Usage: node export_landscape_pdf.mjs --input <html-or-url> --output <pdf> [--screen-report] [--css file] [--chrome path]");
+    throw new Error("Usage: node export_landscape_pdf.mjs --input <html-or-url> --output <pdf> [--screen-report] [--css file] [--chrome path] [--no-linux-fix]");
   }
   out.width = Number(out.width);
   out.height = Number(out.height);
@@ -133,8 +138,13 @@ async function main() {
   if (args.screenReport) {
     await page.addStyleTag({ content: screenReportCss(args.width, args.height) });
   }
-  if (args.css) {
-    await page.addStyleTag({ content: fs.readFileSync(args.css, "utf-8") });
+  const cssFiles = [];
+  if (args.css) cssFiles.push(path.resolve(args.css));
+  if (!args.noLinuxFix && process.platform === "linux" && fs.existsSync(LINUX_PRINT_FIX_CSS)) {
+    cssFiles.push(LINUX_PRINT_FIX_CSS);
+  }
+  for (const cssFile of cssFiles) {
+    await page.addStyleTag({ content: fs.readFileSync(cssFile, "utf-8") });
   }
 
   await page.waitForFunction(
@@ -146,6 +156,8 @@ async function main() {
 
   const output = path.resolve(args.output);
   fs.mkdirSync(path.dirname(output), { recursive: true });
+  await page.evaluate(() => document.fonts.ready).catch(() => undefined);
+  await page.waitForTimeout(800);
   await page.pdf({
     path: output,
     width: `${args.width}px`,

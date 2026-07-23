@@ -88,7 +88,8 @@ Always show the audit script output before committing to a structure so the data
 ## File Map
 
 - `scripts/inspect_assessment_json.py`: structural audit; with `--lifeecho`, also annotates LifeEcho-shaped payloads (chapters, key moments, big-five scores).
-- `scripts/export_landscape_pdf.mjs`: export an HTML page or local URL to a 16:9 PDF.
+- `scripts/export_landscape_pdf.mjs`: export an HTML page or local URL to a 16:9 PDF. On Linux, auto-injects `scripts/print-fix.linux.css` to avoid headless Chromium PDF artifacts (gray blocks behind blur/glass/gradient text).
+- `scripts/print-fix.linux.css`: PDF-only CSS overrides for Linux headless Chromium; inject via `--css` or the exporter's Linux auto-fix, never via `<link>` in HTML.
 - `references/lifeecho-methodology.md`: LifeEcho data model, scoring rules, module semantics, color vocabulary, and quality gates (single source of truth for LifeEcho-specific knowledge).
 - `references/workflow.md`: detailed production process and data-quality rules.
 - `references/report-voice.md`: student-facing writing standards.
@@ -119,8 +120,11 @@ python scripts/inspect_assessment_json.py session-raw-data.json --lifeecho --out
 # Generic audit (any JSON)
 python scripts/inspect_assessment_json.py input-a.json input-b.json --out audit.md
 
-# Export landscape PDF
+# Export landscape PDF (Linux auto-applies print-fix.linux.css)
 node scripts/export_landscape_pdf.mjs --input ./index.html --output report-1080p.pdf --screen-report
+
+# Optional: pass the Linux fix manually on any OS
+node scripts/export_landscape_pdf.mjs --input ./index.html --output report-1080p.pdf --screen-report --css scripts/print-fix.linux.css
 ```
 
 ## Source of truth
