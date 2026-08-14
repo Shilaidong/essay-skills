@@ -52,13 +52,17 @@ python scripts/md_quality_check.py ./project/output/report.md
 
 ## Important conventions
 
-- Read all user files first.
+- Read all user files first. Read `resources/client_facing_delivery.md` before writing `output/`.
 - Preserve user-edited drafts as base documents.
 - Verify current school/test/competition/activity policies on official websites.
+- Client reports use parent-facing Chinese and `> **这一节的结论。**` under every numbered section.
+- Names: evidenced only; never guess Chinese characters from pinyin.
+- School list: 内部数据库和学校官网. Do not write catalog gaps into the client file.
 - Do not default every student to one competition path.
-- For every designed competition/activity path, write the advancement mechanism or state `无正式晋级机制`.
-- Mark missing facts as `信息待补齐`.
-- Use rendered Gantt charts in Word.
+- For every designed competition/activity path, write the advancement mechanism or state that there is none.
+- Missing facts in the client report: `还需要补充`.
+- Word uses LifeEcho cream/teal (`F8F5ED`) with dark text; Gantt is an embedded image.
+- Overwrite finished filenames. No `v2` / `修改版`.
 
 ## Chinese font note for Gantt charts
 

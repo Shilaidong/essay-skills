@@ -1,16 +1,29 @@
 font:
   east_asia: Microsoft YaHei
-  latin: Arial
-  body_size_pt: 10.5
-  title_size_pt: 18
-  heading1_size_pt: 15
-  heading2_size_pt: 12
+  latin: Georgia
+  body_size_pt: 11
+  title_size_pt: 20
+  heading1_size_pt: 16
+  heading2_size_pt: 13
 page:
-  margin_cm: 1.8
+  margin_cm: 2.0
+  background: "F8F5ED"
 colors:
-  heading: "2F75B5"
-  table_header: "D9EAF7"
-  table_border: "BFBFBF"
+  ink: "16211E"
+  heading: "004D47"
+  heading2: "00685F"
+  muted: "3A4C47"
+  gold: "8A6A2F"
+  table_header: "E6F5EE"
+  table_header_text: "004D47"
+  table_border: "D6CEBF"
+  table_cell_text: "16211E"
+  summary_fill: "E6F5EE"
+  summary_text: "004D47"
+  quote_border: "00685F"
 paragraph:
-  line_spacing: 1.18
-  space_after_pt: 4
+  line_spacing: 1.32
+  space_after_pt: 8
+header:
+  text: "美国本科申请规划"
+  color: "00685F"

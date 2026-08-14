@@ -1,7 +1,7 @@
 ---
 name: elite-us-undergrad-planning
-description: Create high-end Chinese US undergraduate Top10/Top20 application planning reports from student files, transcripts, score reports, research plans, activity materials, and interview transcripts; includes admissions positioning, school/program strategy, core activity and competition pathways with advancement mechanisms, SAT/ACT and TOEFL/IELTS planning, Markdown+Word outputs, and polished Gantt charts.
-version: 1.1.0
+description: Create high-end Chinese US undergraduate Top10/Top20 application planning reports from student files, transcripts, score reports, research plans, activity materials, and interview transcripts; includes admissions positioning, school/program strategy, core activity and competition pathways with advancement mechanisms, SAT/ACT and TOEFL/IELTS planning, parent-and-student-facing Markdown+Word, LifeEcho cream/teal styling, and polished Gantt charts. Use when the user asks for 美国本科规划案, 招生官诊断, 选校, SAT/托福规划, or a client-ready Word/Markdown report.
+version: 1.2.0
 ---
 
 # Elite US Undergraduate Planning Skill
@@ -15,21 +15,26 @@ Use this skill when the user asks for any of the following:
 - SAT/ACT、TOEFL/IELTS/Duolingo、新托福 1–6 分制规划
 - 生成 Word、Markdown、Mermaid、甘特图、时间轴图表、申请规划交付件
 
-The deliverable standard is consulting-grade: accurate, evidence-based, actionable, visually polished, and immediately usable in client communication.
+The deliverable is a finished report for parents and students: accurate, evidence-based, actionable, visually polished. Consultant jargon stays in `working/`. Before writing client files, read [resources/client_facing_delivery.md](resources/client_facing_delivery.md) and [resources/report-voice.md](resources/report-voice.md).
 
 ---
 
 ## 0. Non-negotiable principles
 
-1. **所有事实先来自材料，再来自官网核验，再来自明确推断。** Do not invent facts. Mark missing or uncertain data as `信息待补齐` or `需核验`.
+1. **所有事实先来自材料，再来自官网核验，再来自明确推断。** Do not invent facts. Internal notes may use `信息待补齐` / `需核验`. Client sentences use `还需要补充` / `还需要核对`.
 2. **必须读完全部材料。** Do not rely only on interview transcripts. Audit every uploaded transcript, grade report, résumé, PDF, project plan, Word file, image, and prior draft.
 3. **用户修改后的文档优先。** If a user uploads a revised Word/MD version, treat it as the new base document and preserve their edits unless explicitly asked to rewrite.
 4. **最新政策必须官网核验。** School testing policy, admissions deadlines, SAT dates, TOEFL scoring, competition requirements, advancement mechanisms, scholarship/aid rules, and program details must be verified with official or primary sources whenever current accuracy matters.
-5. **输出必须能落地。** Every academic, activity, or competition recommendation needs task, owner, timeline, evidence, deliverable, and risk management.
+5. **每条建议都要能执行。** Every academic, activity, or competition recommendation needs task, owner, timeline, evidence, deliverable, and risk management.
 6. **Word 版甘特图必须是图片或图表，不要只放 Mermaid 代码。** Markdown can include Mermaid code, but Word must embed a rendered PNG/SVG chart.
 7. **对外表述要克制可信。** Avoid overstating competition pathways, awards, school odds, or “guaranteed” results. Use conditional strategy language.
 8. **不要把某个竞赛路径写成所有学生的默认路径。** ISEF, Conrad, Olympiad, hackathon, debate, writing, entrepreneurship, service, or sports pathways should appear only when they match the student’s evidence and goals.
 9. **保护隐私。** Do not bake one student's private data into a reusable template. Use provided student data only for the current report.
+10. **姓名只写有证据的。** Transcript, passport, official ID, or explicit confirmation. Never invent a Chinese legal name from pinyin. If uncertain, omit it.
+11. **给家长和学生看，不给同行看。** First principles, ordinary Chinese. No `招生官式诊断`, `画像`, `库内查询`, or AI filler. Each numbered section starts with `> **这一节的结论。**` in a professional briefing tone, not a pep talk, and never `小白`.
+12. **选校来源对外只写内部数据库和学校官网。** If the internal catalog lacks art/conservatory/design schools, add them from official sites. Never write that the catalog is missing them.
+13. **配色与 LifeEcho 一致，字必须看得清。** Page `F8F5ED`, ink `16211E`, headings `004D47` / `00685F`, fills `E6F5EE` with dark teal text. Never white or cream text on cream or mist.
+14. **终稿无修改痕迹。** Overwrite `output/<EnglishName>_planning_report.md` and `.docx`. No `v2`, `修改版`, or changelog in the filename or body.
 
 ---
 
@@ -57,7 +62,9 @@ Create and maintain these working files:
 - `working/fact_matrix.md` — student facts grouped by academics, tests, AP/IB/A-Level, activities, research, competitions, goals, constraints.
 - `working/strategy_notes.md` — admissions positioning and decision logic.
 - `working/activity_competition_map.md` — core activity/competition tracks, advancement mechanisms, deliverables, risks, fallback options.
-- `working/open_questions.md` — missing facts to ask user or mark as `信息待补齐`.
+- `working/open_questions.md` — missing facts to ask the user. Internal marker `信息待补齐`; client wording `还需要补充`.
+
+Before drafting `output/`, read [resources/client_facing_delivery.md](resources/client_facing_delivery.md).
 
 ---
 
@@ -125,21 +132,22 @@ In the report, include a final `官网信息核验摘要` or footnote-style sour
 
 ## 4. Planning report structure
 
-The standard report should use this sequence unless the user requests otherwise:
+Client report sequence (parent/student titles). Each numbered section starts with `> **这一节的结论。**`
 
-1. `学生当前情况整理与招生官式诊断`
+1. `学生当前情况，以及大学会怎么看`
 2. `目标专业与学校策略`
-3. `G11/G12 课程、AP/IB/A-Level 与 GPA 规划`
+3. `课程、AP/IB/A-Level 与 GPA 规划`
 4. `SAT/ACT 与语言成绩规划`
-5. `科研、核心活动与竞赛路径规划`
-6. `申请材料叙事规划`
+5. `科研、核心活动与竞赛`（艺术方向可写成 `作品、核心活动与竞赛`）
+6. `申请材料怎么写`
 7. `时间轴安排`
-8. `风险管理与证据清单`
+8. `风险管理，以及还缺哪些材料`
 9. `官网信息核验摘要`
 10. `规划甘特图`
-11. `附录：主要官网链接`
+11. `接下来怎么做`（可选短节）
+12. `附录：主要官网链接`
 
-For shorter assignments, keep the same logic but compress sections.
+For shorter assignments, keep the same logic but compress sections. Do not use `招生官式诊断` or `画像` as client headings. Full title and wording rules: [resources/client_facing_delivery.md](resources/client_facing_delivery.md).
 
 ---
 
@@ -163,24 +171,28 @@ Always include a table with:
 - 管理特点/学习习惯
 - 预算/奖学金/ED 意愿/地理偏好
 
-### 5.2 招生官式诊断口径
+### 5.2 Internal diagnosis vs client writing
 
-Write as an admissions reader would see the file:
+Do the admissions-reader diagnosis in `working/strategy_notes.md` using [resources/admissions_strategy_rubric.md](resources/admissions_strategy_rubric.md):
 
-- What is the academic spike?
-- What is the impact spike?
-- What proves intellectual vitality?
-- What is under-verified or risky?
-- What could become recommendation-letter evidence?
-- What story can tie academics, activities, and personality together?
+- academic spike / impact spike / intellectual vitality
+- under-verified or risky claims
+- recommendation-letter evidence
+- the story that can tie academics, activities, and personality together
 
-### 5.3 Required summary language
+The client report translates that diagnosis into ordinary Chinese: what the transcript shows, what it means for this student’s chances, and what to do next. Do not paste the rubric labels into client headings.
 
-Include:
+### 5.3 Required client summary blocks
 
-- `当前画像结论` — one paragraph, not generic.
-- `三大核心风险` — concrete, tied to evidence.
-- `三大机会点` — optional but recommended.
+In the first section, after the opening conclusion, include:
+
+- 目前情况（table）
+- 成绩单在说什么
+- 我们怎么理解这份材料（one paragraph, specific, not generic）
+- 现在最需要盯住的三件事
+- 已经有的有利条件
+
+Missing facts: `还需要补充`, not `信息待补齐`.
 
 ---
 
@@ -223,25 +235,32 @@ For each main school include:
 
 ### 6.3 Extended school table
 
-Include a broader school/program list with tiers:
+Include a broader school/program list with parent-readable tiers, for example:
 
-- 彩票冲刺 / Dream Reach
-- 主力冲刺 / Core Reach
-- 高冲刺 / High Reach
-- 强校对冲 / Academic or Program Hedge
-- 稳定录取池 / Target/Safety
+- 可以冲、但很难
+- 重点准备
+- 较难
+- 作为补充
+- 相对更稳
+- 最后备选
 
-For each school, include program options and strategy comments.
+Internal notes may still use Reach / Target / Safety. For each school, include program options and strategy comments.
 
 ### 6.4 Batch strategy
 
 Always include 2–3 scenarios:
 
-- `标化达标升级路径`
-- `标化中等但综合画像强路径`
-- `标化未达提交线对冲路径`
+- 考试分数达到可提交线之后
+- 分数中等、作品或活动更完整时
+- 分数仍低、决定不交时
 
-Tie ED/EA/RD choices to the student’s actual future score thresholds.
+Tie ED/EA/RD choices to the student’s actual future score thresholds. On first mention in the client report, explain 提前绑定 / 非绑定提前申请 / 常规申请.
+
+### 6.5 Where the school list comes from
+
+Use the internal school database when the user points to one, and always check official program pages. If the database is national-university / QS scoped and misses art, conservatory, or design schools, add those from official sites.
+
+Client sentence: `学校名单来自我们的内部数据库和各校官网。` Never write 库没有, SQLite, subagent, or query mechanics.
 
 ---
 
@@ -385,34 +404,22 @@ For each core pathway include:
 
 | 字段 | 要求 |
 |---|---|
-| 主线定位 | Academic Spike / Impact Spike / Intellectual Vitality / personal dimension |
-| 活动/竞赛名称 | Use official name if known; otherwise mark `需核验` |
+| 主线定位 | working notes may use spike labels; client table uses ordinary Chinese |
+| 活动/竞赛名称 | Use official name if known; otherwise mark as still needing a check |
 | 为什么适配 | Tie to student evidence and target major |
-| 晋级/筛选机制 | Explain exact path, or state `无正式晋级机制` |
+| 晋级/筛选机制 | Explain exact path, or state there is no formal advancement |
 | 学生策略 | What the student should do differently to be competitive |
 | 交付材料 | paper, poster, video, code, portfolio, pitch deck, data book, essay, training log, etc. |
 | 时间窗口 | months/weeks and decision points |
 | 背书/证据 | award, finalist status, publication, users, partners, judges, mentor letter, analytics |
 | 风险点 | eligibility, team dependence, time cost, policy, safety, oversaturation |
-| 对冲路径 | alternate competitions, public release, local showcase, school club, independent output |
+| 做不成时怎么办 | alternate competitions, public release, local showcase, school club, independent output |
 
 ### 10.3 Pathway examples by field
 
-Use only the examples that match the student.
+Use only the examples that match the student. Details and field-specific chains: [resources/core_activity_competition_pathways.md](resources/core_activity_competition_pathways.md).
 
-**STEM research / science fair:** school or independent project -> local/city/province fair or recognized selection -> finalist/recommendation -> compliance review -> national/international fair. Include research plan, abstract, data book/lab notebook, risk assessment, student contribution statement, and presentation training.
-
-**Engineering design / innovation / entrepreneurship:** prototype -> user testing -> pitch deck/business model -> preliminary submission -> regional/national final -> demo day or accelerator-style recognition. Include team roles, customer discovery, prototype evidence, video, website, and financial/market assumptions.
-
-**Subject competitions:** syllabus preparation -> first-round contest -> cutoff/award -> next round if applicable -> honor list. Include score targets, official rules, prior baseline, training load, and whether advancement exists.
-
-**Robotics / hackathon / maker:** team formation -> build season -> regional qualifier/showcase -> awards/final. Include technical role, repository, engineering notebook, demo video, and team dependency risk.
-
-**Humanities / writing / debate / MUN / speech:** writing/research portfolio -> submission/tournament -> regional/national rounds or editorial selection -> publication/award. Include argument quality, originality, coach/judge feedback, and writing samples.
-
-**Social impact / community service:** problem diagnosis -> pilot -> operations system -> impact metrics -> partner validation -> public report. Usually no formal advancement; value comes from measurable impact, sustainability, and external validation.
-
-**Sports / arts / performance:** training/performance record -> team role or exhibition -> league/competition/showcase if relevant -> leadership system. Value comes from discipline, progression, team impact, coach recommendation, and quantifiable contribution.
+Do not list too many random competitions. Depth and evidence matter more than activity count.
 
 ### 10.4 If ISEF/science fair is explicitly relevant
 
@@ -495,8 +502,9 @@ python scripts/render_gantt.py \
 Chart requirements:
 
 - Chinese labels readable
-- grouped by section
+- grouped by section with parent-facing labels (SAT与托福, 12年级成绩, 作品, not 标化 / SlideRoom)
 - milestones marked with diamonds or stars
+- cream page `#F8F5ED`, dark ink labels, no pale text
 - x-axis dates readable and rotated if needed
 - activity/competition advancement windows clearly shown when relevant
 - embedded in Word as image
@@ -506,11 +514,11 @@ Chart requirements:
 
 ## 14. Output generation standard
 
-Produce at least:
+Produce at least these finished names (no `v2` / `修改版`):
 
 ```text
-output/<student>_planning_report.md
-output/<student>_planning_report.docx
+output/<EnglishName>_planning_report.md
+output/<EnglishName>_planning_report.docx
 output/assets/planning_gantt.png
 ```
 
@@ -526,7 +534,9 @@ output/gantt_tasks.yaml
 
 Markdown should be clean and readable:
 
-- Use numbered sections matching the report structure.
+- Each numbered section starts with `> **这一节的结论。**`
+- Names in the report are evidenced; no pinyin-guessed Chinese legal name
+- No `库内`, SQLite, subagent, `招生官式`, `画像`, `小白`, `v2`, or `修改版`
 - Use compact tables where helpful.
 - Include image references for charts.
 - Include Mermaid code only if the user wants renderable code or if useful as appendix.
@@ -536,12 +546,13 @@ Markdown should be clean and readable:
 
 Word should be client-ready:
 
-- Use professional headings
+- LifeEcho palette from `templates/docx_style_config.yaml` (page `F8F5ED`)
+- dark ink / teal headings; table and summary fills `E6F5EE` with dark teal text, never white on mist
+- section summaries rendered as callout boxes, not faint italic quotes
 - tables should not overflow page width
 - embed Gantt PNG/SVG image instead of Mermaid code
 - include captions under charts
-- use consistent font, spacing, margins
-- inspect the rendered document if possible
+- Microsoft YaHei + Georgia, inspect the rendered document if possible
 
 Use `scripts/build_docx.py` if available:
 
@@ -563,7 +574,10 @@ Before returning files, verify:
 - All uploaded files were reviewed or explicitly marked as unreadable.
 - Key facts match source materials.
 - Current policies have official-source verification.
-- Missing facts are marked `信息待补齐` rather than guessed.
+- Missing facts in the client report are `还需要补充`, not guessed.
+- No invented Chinese name; uncertain names omitted.
+- Each section has `这一节的结论`.
+- Client file has no `库内` / SQLite / subagent / `v2` / `修改版`.
 - School strategy contains main 3 schools if requested.
 - Core activity and competition pathways are truthful, conditional, and include advancement/selection mechanisms where applicable.
 - Research/project plan includes data, controls/evaluation, outputs, and compliance.

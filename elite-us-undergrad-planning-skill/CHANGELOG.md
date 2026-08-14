@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.2.0
+
+- Client reports are written for parents and students: first-principles Chinese, section summaries, no consultant jargon in `output/`.
+- Names must be evidenced; never invent a Chinese legal name from pinyin; omit uncertain names.
+- School lists may combine the internal database with official sites; client text never discloses catalog gaps or query mechanics.
+- LifeEcho visual theme: page `F8F5ED`, dark ink, teal headings, mist fills with dark text, never white-on-cream.
+- Final files overwrite finished names; no `v2` / `修改版` traces.
+- Added `resources/client_facing_delivery.md`; updated voice, privacy, quality gate, template, Word/Gantt builders, and `md_quality_check.py`.
+
 ## v1.1.0
 
 - Generalized the activity/competition planning module.

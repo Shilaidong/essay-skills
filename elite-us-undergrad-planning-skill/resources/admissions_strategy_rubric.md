@@ -1,6 +1,6 @@
 # Admissions Strategy Rubric
 
-Use this rubric to decide whether a plan is Top10/Top20-grade.
+Use this rubric in `working/strategy_notes.md`. Do not paste these English labels into client headings.
 
 ## Academic Spike
 

@@ -12,12 +12,13 @@
 - [ ] Create `activity_competition_map.md` with each core pathway, advancement mechanism, deliverables, risk, and fallback.
 - [ ] Identify contradictions and missing facts.
 - [ ] Verify current official policies online.
+- [ ] Read `resources/client_facing_delivery.md` before drafting client files.
 
 ## B. Strategy design
 
 - [ ] Determine application cycle.
 - [ ] Determine major labels.
-- [ ] Define Academic Spike / Impact Spike / Intellectual Vitality.
+- [ ] Write the admissions-reader diagnosis in working notes only.
 - [ ] Select 3 main reach schools when requested.
 - [ ] Create extended school/program list.
 - [ ] Write ED/EA/RD scenarios by score threshold.
@@ -28,8 +29,8 @@
 
 ## C. Output build
 
-- [ ] Draft Markdown.
-- [ ] Render Gantt chart.
+- [ ] Draft Markdown using parent-facing titles and a section summary under every heading.
+- [ ] Render Gantt chart with LifeEcho cream/teal and readable dark labels.
 - [ ] Embed chart into Markdown.
 - [ ] Convert/build Word document.
 - [ ] Inspect tables and chart.

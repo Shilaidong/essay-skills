@@ -24,6 +24,17 @@ Use official sources when current facts matter.
 
 ## Write source summaries like this
 
+Client report:
+
+- `学校名单来自我们的内部数据库和各校官网。`
+- `SAT 日期来自 College Board。`
+- `托福对照来自 ETS。`
+- `帕森斯申请页目前写着……`
+
+Do not write SQLite, 库内查询, subagent, or “the catalog has no art schools.” If the internal catalog is incomplete, still add the schools from official sites and keep that mechanics out of the client file.
+
+Working notes and chat citations may be more specific:
+
 - `ETS 官方说明：...`
 - `College Board 官方日期页面显示：...`
 - `Stanford 本科招生页面显示：...`

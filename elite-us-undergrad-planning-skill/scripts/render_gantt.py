@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Render a polished admissions-planning Gantt chart from YAML.
 
+LifeEcho palette: dark teal / gold / ink on cream. No pale yellow text,
+no white-on-cream labels.
+
 Input schema:
 
 title: My Gantt
@@ -13,6 +16,9 @@ tasks:
     label: SAT 报名决策
     date: 2026-08-07
     type: milestone
+
+CLI (same as the original):
+  python render_gantt.py --input yaml --output png --mermaid-output mmd --width --height --dpi
 """
 from __future__ import annotations
 
@@ -27,6 +33,20 @@ import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 import yaml
+
+
+INK = "#16211E"
+CREAM = "#F8F5ED"
+PAPER = "#FFFDF8"
+GRID = "#D6CEBF"
+PALETTE = [
+    "#00685F",
+    "#8A6A2F",
+    "#004D47",
+    "#008378",
+    "#3A4C47",
+    "#66756F",
+]
 
 
 def parse_date(value: Any) -> dt.datetime:
@@ -91,6 +111,10 @@ def render(data: Dict[str, Any], output: Path, width: float, height: float, dpi:
     if font:
         plt.rcParams["font.family"] = font
     plt.rcParams["axes.unicode_minus"] = False
+    plt.rcParams["text.color"] = INK
+    plt.rcParams["axes.labelcolor"] = INK
+    plt.rcParams["xtick.color"] = INK
+    plt.rcParams["ytick.color"] = INK
 
     raw_tasks: List[Dict[str, Any]] = data.get("tasks", [])
     tasks = []
@@ -127,25 +151,28 @@ def render(data: Dict[str, Any], output: Path, width: float, height: float, dpi:
         y += 0.65
 
     fig, ax = plt.subplots(figsize=(width, height), dpi=dpi)
+    fig.patch.set_facecolor(CREAM)
+    ax.set_facecolor(PAPER)
 
-    palette = [
-        "#4E79A7", "#F28E2B", "#59A14F", "#E15759", "#B07AA1", "#9C755F",
-        "#EDC948", "#76B7B2", "#FF9DA7", "#BAB0AC", "#6B6ECF", "#17BECF"
-    ]
-    section_color = {sec: palette[i % len(palette)] for i, sec in enumerate(sections)}
+    section_color = {sec: PALETTE[i % len(PALETTE)] for i, sec in enumerate(sections)}
 
     for t, ypos in y_positions:
         sec = t.get("section", "General")
         color = section_color[sec]
         if t.get("type") == "milestone" or "date_dt" in t:
             x = mdates.date2num(t["date_dt"])
-            ax.scatter(x, ypos, marker="D", s=48, color=color, edgecolors="white", linewidths=0.8, zorder=4)
+            ax.scatter(
+                x, ypos, marker="D", s=48, color=color,
+                edgecolors=INK, linewidths=0.6, zorder=4,
+            )
         else:
             start = mdates.date2num(t["start_dt"])
             end = mdates.date2num(t["end_dt"])
-            ax.barh(ypos, end - start, left=start, height=0.48, color=color, alpha=0.92, edgecolor="white", linewidth=0.8)
+            ax.barh(
+                ypos, end - start, left=start, height=0.48,
+                color=color, alpha=0.95, edgecolor=INK, linewidth=0.35,
+            )
 
-    # Section labels on left margin inside the plot.
     xmin_candidates = []
     xmax_candidates = []
     for t in tasks:
@@ -160,7 +187,7 @@ def render(data: Dict[str, Any], output: Path, width: float, height: float, dpi:
     ax.set_xlim(mdates.date2num(xmin) - 10, mdates.date2num(xmax) + 10)
 
     ax.set_yticks([pos for _, pos in y_positions])
-    ax.set_yticklabels(y_labels, fontsize=8)
+    ax.set_yticklabels(y_labels, fontsize=8, color=INK)
     ax.invert_yaxis()
 
     locator = mdates.AutoDateLocator(minticks=6, maxticks=12)
@@ -170,22 +197,37 @@ def render(data: Dict[str, Any], output: Path, width: float, height: float, dpi:
         tick.set_rotation(35)
         tick.set_horizontalalignment("right")
         tick.set_fontsize(8)
+        tick.set_color(INK)
+    for tick in ax.get_yticklabels():
+        tick.set_color(INK)
 
-    ax.grid(axis="x", linestyle="-", alpha=0.20, linewidth=0.8)
+    ax.grid(axis="x", linestyle="-", color=GRID, alpha=0.85, linewidth=0.8)
     ax.set_axisbelow(True)
-    ax.set_title(data.get("title", "Planning Gantt"), fontsize=12, pad=12, fontweight="bold")
+    ax.set_title(
+        data.get("title", "Planning Gantt"),
+        fontsize=12, pad=12, fontweight="bold", color=INK,
+    )
     ax.spines[["top", "right", "left"]].set_visible(False)
-    ax.tick_params(axis="y", length=0)
+    ax.spines["bottom"].set_color(GRID)
+    ax.tick_params(axis="y", length=0, colors=INK)
+    ax.tick_params(axis="x", colors=INK)
 
-    # Section legend. A legend is more robust than drawing section labels in the left margin,
-    # because long Chinese task labels can otherwise overlap with group names.
-    handles = [Patch(facecolor=section_color[sec], edgecolor="white", label=sec) for sec in sections]
-    ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, -0.13),
-              ncol=min(len(handles), 5), frameon=False, fontsize=8)
+    handles = [
+        Patch(facecolor=section_color[sec], edgecolor=INK, linewidth=0.4, label=sec)
+        for sec in sections
+    ]
+    legend = ax.legend(
+        handles=handles, loc="upper center", bbox_to_anchor=(0.5, -0.13),
+        ncol=min(len(handles), 5), frameon=False, fontsize=8,
+        labelcolor=INK,
+    )
+    if legend is not None:
+        for text in legend.get_texts():
+            text.set_color(INK)
 
     fig.tight_layout(pad=1.2)
     output.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(output, bbox_inches="tight")
+    fig.savefig(output, bbox_inches="tight", facecolor=fig.get_facecolor(), edgecolor="none")
     plt.close(fig)
 
 
