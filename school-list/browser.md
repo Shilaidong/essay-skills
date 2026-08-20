@@ -2,18 +2,25 @@
 
 网络搜索必须走本机真浏览器。不要用搜索摘要 API、或只读结果列表当主路径。
 
-## 用哪个
+## 用哪个（强制，不要换）
 
-看本机有什么专用浏览器，有哪个用哪个，并告诉用户这次用的是哪一个。
+先看操作系统，再开对应那一个。告诉用户这次用的是哪一个。
 
-| 系统 | 优先 |
-|---|---|
-| Windows | Browser OS NEO（或同类型的本机专用浏览器） |
-| Mac | EGO（或同类型的本机专用浏览器） |
+| 系统 | 必须用 | 怎么认 |
+|---|---|---|
+| macOS | **ego-lite** | 技能名 `ego-browser`；命令 `ego-browser`。先加载/按 `ego-browser` 那份 skill 操作（`ego-browser nodejs` heredoc、task space）。 |
+| Windows | **Browser OS NEO** | 本机的 Browser OS NEO 应用 / 已接好的 NEO MCP。不要用别的 Chromium 壳顶替。 |
 
-不要用聊天窗口里的内嵌预览页凑合。专用浏览器都不可用时，才退到命令行浏览器，用之前先说一声。
+不准用：聊天窗口内嵌预览、系统 Chrome/Edge、无头抓取、Tavily / 纯搜索 API。
 
-需要登录授权时，走该浏览器自己的授权，不要改成无头抓取。
+缺了就**停**：
+
+- Mac 没有 `ego-browser` 命令，或找不到 `ego-browser` 技能：不要改用别的浏览器。让用户打开 ego lite，再走一遍引导；或从应用包把 `ego-skills/ego-browser` 拷回各 Agent 的 skills 目录。应用一般在 `/Applications/ego lite.app`。网站：https://lite.ego.app/
+- Windows 没有 NEO：不要改用别的浏览器。让用户打开 Browser OS NEO，把 MCP/权限接好再继续。
+
+需要登录授权时，走该浏览器自己的授权，不要改成无头抓取。小红书要扫码，停下来等用户在**这个**浏览器里登好。
+
+本包**不含** ego-lite / NEO 技能。装 `school-list` 只许装这一夹，不要把整个技能仓覆盖到 skills 目录上。
 
 ## 各路怎么搜
 
