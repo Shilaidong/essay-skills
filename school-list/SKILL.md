@@ -1,17 +1,19 @@
 ---
 name: school-list
 description: >-
-  Build a consultant school list (~20) from a local School Navigator SQLite
-  catalog plus real-browser research (official programs, 一亩三分地, Google, 小红书).
-  Uses parallel sub-agents, then the main agent weighs sources and fills the
-  user's school-list template in the student work folder. Use when the user
-  asks for 选校, 选校名单, 找学校, school list, 冲稳保名单, or loads school-list.
-  Not a full planning report.
+  Build a consultant school list (~20) that looks strong, fits the student,
+  and is actually gettable: school first, easier program door, then switch.
+  Same school preferably one harder plus one easier major. Catalog +
+  real-browser research (official pages, 一亩三分地, Google, 小红书).
+  Use when the user asks for 选校, 选校名单, 找学校, school list, 冲稳保名单,
+  一高一低, or loads school-list. Not a full planning report.
 ---
 
 # 选校名单
 
 给学生找选校。先读学生文件夹和对话框，再查本地库，再用**真浏览器**分路搜索，最后由总 Agent 出大约 20 所，填进选校模板。后续还要人工核对，名单不能少。
+
+怎么找见 [strategy.md](strategy.md)：**学校是第一位**；找既好看、又好申、又匹配的；同一所尽量**一高一低**；别全搞难的。太神的可以申一下试试，主体走最好录的口，进了再定专业。
 
 本包不管整份规划案、甘特图、Word。那种走规划案 skill。若已加载顾问本人的口吻包，判断句按那份写。
 
@@ -57,13 +59,13 @@ python scripts/resolve_paths.py --work "<学生工作文件夹，可空>" --db "
 | 选校模板 | 用户链接，或 `选校清单模板.xlsx` |
 | 学生工作文件夹 | 用户给的文件夹；没有就只用对话框和已上传文件 |
 
-库怎么查：[catalog.md](catalog.md)。浏览器怎么调：[browser.md](browser.md)。Excel 怎么填：[template.md](template.md)。
+怎么找：[strategy.md](strategy.md)。库怎么查：[catalog.md](catalog.md)。浏览器怎么调：[browser.md](browser.md)。Excel 怎么填：[template.md](template.md)。
 
 ### 1. 先读完再搜
 
 1. 读学生工作文件夹里的**全部**文件（成绩、旧名单、纪要、截图说明都算）。
 2. **优先以文本框信息为主。** 对话框和文件夹打架，听对话框。
-3. 选校之前，用几条短句跟用户对齐：目标国家/学位、专业口、冲的学校长什么样、有没有地区/预算/批次偏好。这些如果对话框或文件夹里已经有，复述确认即可，**没问题不要问得特别细**。
+3. 选校之前，用几条短句跟用户对齐：目标国家/学位、专业口、学校要好看还是先求稳进、有没有地区/预算/批次偏好。已经有就复述，**没问题不要问得特别细**。对齐时带一句：我按学校第一、同校一高一低来找，名单不会全是难的。
 4. 缺「国家或地区 + 本科/硕士 + 专业方向」这三件才追问。GPA、标化、偏好有就用，没有先出名单，标「还需要核对」。
 
 ### 2. 查库（总 Agent 自己做）
@@ -74,7 +76,7 @@ python scripts/resolve_paths.py --work "<学生工作文件夹，可空>" --db "
 python scripts/query_catalog.py --db "<sqlite路径>" --q "<专业关键词>" --country US --degree ug --limit 40
 ```
 
-国家、学位、关键词按学生情况改。可多跑几组同义词（CS / Computer Science / 计算机）。
+国家、学位、关键词按学生情况改。同一所学校至少跑两套词：他真正想学的（高），以及招人更多、更好进的相邻口（低）。不要只搜最热那个专业名。细则见 [catalog.md](catalog.md)。
 
 先读这份库的 `meta`（`resolve_paths.py` 会带出来）：转储时间、学校数、项目数以**当前这份文件**为准，不要用旧笔记里的日期和计数。这类库一般是 School Navigator 快照，**本科项目多、硕士少**；港新澳欧加等常在 `OTHER`。库里没有的学校，允许浏览器补，但要写清来源。截止日期、学费、语言分以官网为准，库只能当线索。
 
@@ -84,9 +86,9 @@ python scripts/query_catalog.py --db "<sqlite路径>" --q "<专业关键词>" --
 
 | 路 | 搜什么 | 必须交回 |
 |---|---|---|
-| A 项目 | 官网项目页、学院页、录取要求、课程、截止日期 | 学校/项目、URL、读到的要求与课程、和这个学生是否对口 |
-| B 论坛 | 一亩三分地经验帖；谷歌上其他网站的帖子 | 帖子 URL、年份、作者背景、实际说了什么（不是标题） |
-| C 小红书 | 搜一搜、看一看笔记正文 | 同上；要登录就停，让用户在浏览器里扫二维码，不要自己绕 |
+| A 项目 | 官网：高/低两个项目页、转专业/院是否卡死、招生规模、课程 | 每个学校尽量交回一高一低；URL、要求、好不好进、进了能不能转 |
+| B 论坛 | 一亩三分地：哪个口好申、哪个太卷、转专业；谷歌同类帖 | 帖子 URL、年份、作者背景、正文里怎么说，不是标题 |
+| C 小红书 | 学校+专业+好申/转专业 | 同上；要登录就停，让用户在浏览器里扫二维码，不要自己绕 |
 
 每路必须用真浏览器，规则见 [browser.md](browser.md)。禁止把 Tavily / 纯搜索 API 当主路径。禁止只交标题列表。
 
@@ -94,11 +96,13 @@ python scripts/query_catalog.py --db "<sqlite路径>" --q "<专业关键词>" --
 
 ### 4. 总 Agent 出名单
 
-收齐各路汇报后，你来权衡，提出一份学校名单：
+收齐各路汇报后，按 [strategy.md](strategy.md) 权衡，提出一份学校名单：
 
-- **大约 20 所**（按学校计，18–22 可接受）。不要 8 所交差。
-- 分层用模板用词：**冲刺 / 匹配 / 保底 / 彩票项**。美本还要在顾问说明里标 ED/EA/RD 是否互斥（知道才写）。
-- 每所：为什么放、对口项目、证据（库 / 官网 / 论坛）、风险、还需要核对什么。
+- **大约 20 所**（按学校计，18–22 可接受）。不要 8 所交差，也不要 20 所全是最难的。
+- 分层用模板用词：**冲刺 / 匹配 / 保底 / 彩票项**。匹配是主体。彩票项 2–4 所即可，写「可以申一下试试」。
+- **同一所尽量两行：一高一低。** 低的是主申、更好进；高的更贴他想学的，进了再转或双专业。配不出第二个，顾问说明写原因。专业行数应明显多于学校数。
+- **先核好转不转。** 好转：低口主申。转死了：低的必须落在对的学院。几乎转不了又对不上，先 pass。
+- 每一所答得上：好看、好申、匹配。不能只盯最前面那一档。美本还要标 ED/EA/RD 是否互斥（知道才写）。
 - 论坛和小红书当案例和舆情，不当官方要求。
 - 不保证录取。不编排名、录取率、分数线。
 
@@ -117,7 +121,9 @@ python scripts/fill_list.py --template "<模板xlsx>" --out "<学生文件夹>/�
 - [ ] 偏好已用短句对齐，没有盘问细表
 - [ ] 用这次解析到的 sqlite 查过，且是只读；回复里没有写死旧机器路径
 - [ ] 项目 + 论坛（+ 能开的小红书）都用真浏览器看过正文
-- [ ] 约 20 所，有冲稳保，写在学生工作文件夹
+- [ ] 约 20 所；匹配是主体，不是全冲难的
+- [ ] 多数学校有一高一低两行，或说明了为什么只有一个口；专业行数明显多于学校数
+- [ ] 顾问说明能看出：学校第一、低的更好进、高的进了再转；转不转得了写清了
 - [ ] 学生文件夹里有填好的 `选校清单.xlsx`；原模板没被改；空字段标「还需要核对」
 - [ ] 没有学生证件号、电话；举例用「学生 A」
 

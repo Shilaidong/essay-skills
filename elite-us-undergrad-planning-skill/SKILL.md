@@ -17,6 +17,8 @@ Use this skill when the user asks for any of the following:
 
 The deliverable is a finished report for parents and students: accurate, evidence-based, actionable, visually polished. Consultant jargon stays in `working/`. Before writing client files, read [resources/client_facing_delivery.md](resources/client_facing_delivery.md) and [resources/report-voice.md](resources/report-voice.md).
 
+If the user only wants a ~20-school list from the local catalog + browser/forums (not a full report), use `school-list` instead. School picking follows that skill’s `strategy.md`: school first; looks strong + gettable + fit; same school preferably one harder plus one easier program; do not make an all-reach list.
+
 ---
 
 ## 0. Non-negotiable principles
@@ -244,7 +246,7 @@ Include a broader school/program list with parent-readable tiers, for example:
 - 相对更稳
 - 最后备选
 
-Internal notes may still use Reach / Target / Safety. For each school, include program options and strategy comments.
+Internal notes may still use Reach / Target / Safety. For each school, include program options and strategy comments. Prefer **one gettable door + one sharper door** at the same school when the catalog allows it; say which is the main apply path and whether transfer is realistic. Do not fill the table with only the hardest major at each school.
 
 ### 6.4 Batch strategy
 

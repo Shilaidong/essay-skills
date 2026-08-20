@@ -37,8 +37,11 @@ python scripts/query_catalog.py --db "<这次解析到的sqlite>" --q "computer 
 python scripts/query_catalog.py --db "<sqlite>" --courses "<program_id>"
 ```
 
+国家、学位、关键词按学生情况改。同一所学校至少两套 `--q`：高（真正想学的）和低（更好进的相邻口）。例如物理/工程可以再查 applied physics、engineering physics、statistics、information science，不要只查最热的那个名。
+
 ## 怎么用查询结果
 
-- 当候选池，不是终榜。终榜大约 20 所，由总 Agent 权衡官网和论坛之后定。
+- 当候选池，不是终榜。终榜按 [strategy.md](strategy.md) 来：好看、好申、匹配；同校一高一低。
+- 同一 `school_id` 下把能当「高」和能当「低」的项目都留下来，交给浏览器去核转专业和招生规模。
 - `official_url` 必须再用浏览器打开核对。
 - 库没有的学校可以补，在名单里写「库外，来源：官网/论坛」。

@@ -78,6 +78,10 @@ def fill(template: Path, out: Path, student: str, rows: list[dict], export_day: 
 
     for i, item in enumerate(rows):
         r = DATA_START + i
+        note = str(item.get("note") or "").strip()
+        lane = str(item.get("lane") or "").strip()
+        if lane in {"高", "低"} and not note.startswith("【"):
+            note = f"【{lane}】{note}"
         values = [
             normalize_group(str(item.get("group", ""))),
             item.get("school") or "还需要核对",
@@ -86,16 +90,31 @@ def fill(template: Path, out: Path, student: str, rows: list[dict], export_day: 
             item.get("college") or "还需要核对",
             item.get("region") or "还需要核对",
             item.get("url") or "还需要核对",
-            item.get("note") or "",
+            note,
         ]
         for c, val in enumerate(values, 1):
             ws.cell(r, c).value = val
 
-    schools = {str(x.get("school") or "").strip() for x in rows if str(x.get("school") or "").strip()}
-    ws["F2"] = len(schools)
+    from collections import Counter
+
+    school_names = [
+        str(x.get("school") or "").strip()
+        for x in rows
+        if str(x.get("school") or "").strip() and str(x.get("school") or "").strip() != "还需要核对"
+    ]
+    counts = Counter(school_names)
+    singles = sorted(name for name, n in counts.items() if n < 2)
+    ws["F2"] = len(counts)
     ws["H2"] = len(rows)
     wb.save(out)
     print(f"wrote {out} schools={ws['F2'].value} programs={ws['H2'].value}")
+    if counts and len(singles) / len(counts) > 0.3:
+        preview = "、".join(singles[:8])
+        more = f" 等{len(singles)}所" if len(singles) > 8 else ""
+        print(
+            f"warn: {len(singles)}/{len(counts)} schools have only one program "
+            f"(want 一高一低). {preview}{more}"
+        )
 
 
 def main() -> None:
