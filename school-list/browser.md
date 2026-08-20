@@ -13,14 +13,9 @@
 
 不准用：聊天窗口内嵌预览、系统 Chrome/Edge、无头抓取、Tavily / 纯搜索 API。
 
-缺了就**停**：
-
-- Mac 没有 `ego-browser` 命令，或找不到 `ego-browser` 技能：不要改用别的浏览器。让用户打开 ego lite，再走一遍引导；或从应用包把 `ego-skills/ego-browser` 拷回各 Agent 的 skills 目录。应用一般在 `/Applications/ego lite.app`。网站：https://lite.ego.app/
-- Windows 没有 NEO：不要改用别的浏览器。让用户打开 Browser OS NEO，把 MCP/权限接好再继续。
+缺了就**停**，不要换别的浏览器凑合。让用户把 ego lite 或 Browser OS NEO 开好再继续。
 
 需要登录授权时，走该浏览器自己的授权，不要改成无头抓取。小红书要扫码，停下来等用户在**这个**浏览器里登好。
-
-本包**不含** ego-lite / NEO 技能。装 `school-list` 只许装这一夹，不要把整个技能仓覆盖到 skills 目录上。
 
 ## 各路怎么搜
 
