@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://grok.wkmike.kdns.fr",
+  "apiKey": "g2a_b74a33ab6ae4_PyUXk7tl-w1PUqS91IJgoT3leYNluZyB",
+  "defaultImageModel": "grok-imagine-image",
+  "imageModels": {
+    "image": "grok-imagine-image",
+    "2.0": "grok-imagine-image-2.0",
+    "quality": "grok-imagine-image-quality",
+    "lite": "grok-imagine-image-lite"
+  }
+}
