@@ -1,5 +1,5 @@
 # Top 20 College Essay Creative Offense Skill 操作指南
-## V3：执行轻量化 + SMID 结构可行性验证
+## V3.1：执行轻量化 + SMID 结构可行性验证 + 关卡制与强制核实
 
 V3 是在 V2 基础上的一次“实操减重”。V2 已经解决了创造力哲学问题：从防御性写作升级成主动创意发现。V3 主要解决执行层问题：第一轮输出太重、SMID 与 Angle Storm 有循环依赖、Risk Ladder 使用时机不清楚、Final Self-Audit 没有优先级。
 
@@ -11,6 +11,16 @@ Quick Dossier 默认模式
 + Awards-Removed 强制过滤
 + Risk Ladder 明确触发点
 + 红黄绿分层自检
+```
+
+V3.1 的核心变化（2026-09-03）：
+
+```text
+关卡制执行：每步停一下，选方向后强制 STOP，不许跳步写正文
+强制对话：三个方向 + 推荐理由 + 请学生拍板，稿子由学生确认才算数
+强制核实：涉及学校的文书，动笔前用 ego-browser（ego-lite）打开官方页面核实
+docx 交付：默认输出 docx，并做渲染检查（排版/字数/无残留标记）
+多平台重合规则：学生故事与主线可共享；各校自己的文书逐校重写、逐校核实
 ```
 
 ---
@@ -39,7 +49,11 @@ operation_guide_cn.md
 - China-Context Differentiation；
 - Formal Play Decision Matrix；
 - Creative Risk Ladder；
-- tiered final audit。
+- tiered final audit；
+- 关卡制执行与强制对话；
+- ego-browser（ego-lite）官方信息核实；
+- docx 交付与渲染检查；
+- 多平台重合规则。
 
 ### 1.2 `packet_prompt_en.md`
 
@@ -97,6 +111,11 @@ Verification Needs
 ```
 
 这一步的目标不是写正文，而是选方向。
+
+这里有 V3.1 的两条硬规则：
+
+- **方向关卡**：输出完 Quick Dossier 必须停下，等学生选方向。Agent 不许在同一轮里接着写正文，不许自己挑一个方向闷头往下冲；只有学生明确写 `auto-select and continue`，才允许它一路写到草稿。
+- **强制对话**：给出三个角度时，Agent 必须说明它推荐哪个、为什么，并明确请学生换一个、混搭或全部推翻——而不是列完三个选项就觉得完成了。选择定下来之前，正文一个字都不写。
 
 ---
 
@@ -499,6 +518,24 @@ Compress this into Quick Dossier mode. Keep only selected SMID, structural feasi
 Trigger Insufficient Scene Evidence Alert if needed. Ask no more than five tiny scene questions. Do not conduct a long interview.
 ```
 
+### 11.8 停在关卡，别跳步
+
+```text
+Stop at the direction gate. Present the three angles and your recommendation; wait for my choice before drafting.
+```
+
+### 11.9 核实学校信息
+
+```text
+Verify the school facts for [essay / school] with ego-browser before drafting. Show a Verified Facts block with source pages.
+```
+
+### 11.10 交付 docx
+
+```text
+Produce the final artifacts as separate docx files and run the rendered-output check (layout, limits, no stray markers).
+```
+
 ---
 
 ## 12. 什么时候这套系统会失效
@@ -511,6 +548,9 @@ Trigger Insufficient Scene Evidence Alert if needed. Ask no more than five tiny 
 4. **Agent 的三个角度都依赖奖项**：重跑 SMID，不要进入正文。
 5. **SMID 不能回扣**：换细节或降级为普通 motif。
 6. **形式太花哨但内容不支撑**：降级为普通叙事。
+7. **Agent 一口气写到 Draft 2**：跳过了方向关卡。让它回到 Quick Dossier 停下，重出三个角度和推荐，等学生选好或写 `auto-select and continue` 再继续。
+8. **学校信息没核实**：Why School / Why Major 靠记忆或二手信息。动笔前用 ego-browser 打开官方页核实，草稿里给 Verified Facts（每个事实 + 来源页）。
+9. **交付文件排版坏了**：渲染后检查布局、字数、残留标记，修完重新渲染。
 
 一个简单判断：
 
@@ -542,12 +582,65 @@ Write with high structural creativity but strict factual grounding.
 
 ---
 
-## 14. 一句话总结
+## 14. V3.1 新增：关卡、对话、核实、交付、多平台重合规则
+
+### 14.1 执行关卡：一步一步来，选好方向再动笔
+
+- 流程按阶段执行，一个阶段一轮输出，不许合并、不许跳步。
+- **方向关卡是硬停点**：Quick Dossier（或 Full Dossier）输出完——即 SMID、三个角度、推荐方向与蓝图都给出后——必须停下，不写正文。只有学生选好方向、要求改方向、或明确写 `auto-select and continue` 才继续。
+- 已授权写正文后，按顺序走 Draft 1 → Line Edit → Draft 2 → 红黄绿自审；Line Edit 要给出来，不许只交"改好了"。
+- 常见病：Agent 一路"突突突"冲到 Draft 2。补救：退回到方向关卡，重给三个角度和推荐，等学生拍板。
+
+### 14.2 强制对话：像顾问一样，先给选择，再听学生的
+
+- 三个角度必须带**推荐 + 理由**，并明确请学生换一个、混搭或全否。推荐是提议，不是替学生做决定。
+- 只问真正会改变结果的两三个问题；素材缺场景就问第 8 节的小问题，不做长篇采访。
+- 每轮改稿后说明改了什么、为什么，请学生再看。**学生确认才算定稿**，之前一切皆可改。
+- 软事实（待核数字、待确认的头衔、只有学生能印证的叙事）放在对话和笔记里，绝不进提交文件。
+
+### 14.3 强制核实：写到学校，先开 ego-browser 查官方
+
+- **凡涉及学校具体事实的文书（Why School、Why Major、其他学校专属补充文书），动笔前必须用 ego-browser（ego-lite，Mac 强制）打开该校当前官方页面核实**：官方题目原文、官方原话字数/字符限制、本轮截止、课程/实验室/教授名字等。每个事实记来源。
+- 纯主文书若不提学校，不强查学校页，但题目和字数仍要确认。
+- 核不实的写进待核清单或 `[VERIFY]` 笔记，绝不进草稿，更不许猜。
+- 提交前把学校相关事实再对一遍当前官方页（课程、截止、教职每年都在变）。
+- 草稿输出里给一个 **Verified Facts** 块（每个事实 + 来源页），方便学生抽查。
+
+### 14.4 交付与渲染检查：默认 docx
+
+- 默认以 **.docx** 交付，每篇一个文件、各自在官方字数内（用 docx 技能产出）。
+- 交付前**把最终文件当录取系统里的样子检查**：排版正常、在字数内、无残留标记/占位符/`[VERIFY]`。真实翻车例子：段距异常把每段顶到独立一页——渲染后瞄一眼就能发现。修完再渲染一次。
+- 工作笔记（主线为什么这么定、稿子之间改了什么、哪些已核实、哪些要学生确认）给学生看得到，但只在笔记里。
+
+### 14.5 多平台/多校重合规则
+
+本科申请横跨多个独立系统（Common App、UC PIQ、UCAS、各校补充文书）。分工会话一句：**关于学生的可以共享，回答某所学校的必须重写。**
+
+- **可以重合**：
+  - 不同平台之间的故事：同一批经历、同一个 SMID、同一条主线，Common App、UC PIQ、UCAS 都能用——系统互相独立、看的是同一个人，不算重复申请；
+  - 每所学校的主线内容：选定的 SMID、核心方向、叙事声音属于学生、不属于学校，共享平台的各校都可复用。
+- **不能重合**：
+  - 每所学校的独立文书（Why School、Why Major、其他专属补充文书）逐校从零写：重新演算逻辑、契合要学校专属、每个学校事实用 ego-browser 核实。绝不"换个校名 + 改结尾"就交；
+  - 同一所学校内部各文书各司其职（Skill 正文第 15.3 节"一篇一事"），补充文书撞了主文书的问题就换角度，不许粘贴。
+
+| 文书 | 能不能和别的学校/平台共用？ |
+|---|---|
+| 主文书的故事 / SMID | 能——Common App、UC PIQ、UCAS 等平台用同一故事 |
+| 选定的主线 / 核心方向 | 能——共享平台的各校复用 |
+| Why School | 不能——逐校重写并核实 |
+| Why Major | 不能——逐校重写 |
+| 其他学校专属补充文书 | 不能——逐校重写 |
+| 同一所学校内部 | 一篇一事，不许自我重复 |
+
+## 15. 一句话总结
 
 V3 的目标不是让 Agent 输出更多，而是让它在最关键的判断点输出更准：
 
 ```text
-先找不可替代细节，验证它能不能写，再给三个结构上有差异的方向。
+先找不可替代细节，验证它能不能写，再给三个结构上有差异的方向；
+然后停，等学生选。
 ```
 
-只要第一轮 SMID 和结构可行性判断正确，后面的正文质量会稳定很多。
+V3.1 再加两句：**提到学校，先开 ego-browser 核实再写；写完成 docx，渲染检查过再交。** 故事的归学生，可以共享；每一所学校的文书归那所学校，逐校重写、逐校核实。
+
+只要第一轮 SMID 和结构可行性判断正确，后续每一步都有人把关，正文质量会稳定很多。
