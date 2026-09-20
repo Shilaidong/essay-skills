@@ -1,0 +1,5 @@
+# 敏感配置不入库（局域网服务 token）
+qwen-image-lan/qwen_image_lan_config.json
+qi21-skill/qwen_image_lan_config.json
+*_config.json
+__pycache__/
