@@ -56,6 +56,24 @@ GET {base_url}/health
 
 返回 `warm: true/false`、`queue_size`、`running`。
 
+## 参考图（image_b64）输入
+
+本服务支持「给一张参考图 + 提示词」做图片编辑/重绘。请求里加 `image_b64`：
+
+```python
+import base64
+b64 = base64.b64encode(open("ref.jpg", "rb").read()).decode()
+
+result = generate(prompt="把参考图里的人换到海边，保持同一人物，写实",
+                  image_b64=b64,          # 裸 base64，不要带 data:image/...;base64, 前缀
+                  width=1024, height=1024,
+                  steps=40, seed=42, out_path="edit.png")
+```
+
+- `image_b64` 解析失败的常见原因：**带了 `data:` 前缀**（会 500，不是死锁）。
+- 输出尺寸由 `width/height` 决定；服务端会把超大参考图自动压到长边 1024。
+- 参考图路径用的是**让图像素逐层卸载（sequential offload）**模式，显存占用 ~3.3GB、不会再打满死锁。
+
 ## 客户端实现（参考）
 
 直接调本目录的 `qwen_image_lan_client.py`（路径 `~/.agents/skills/qwen-image-lan/qwen_image_lan_client.py`，可 `import` 或复制逻辑）：
@@ -76,12 +94,14 @@ print(f"saved {result['out_path']} ({result['elapsed_sec']}s)")
 | 401 | 没带 token | 读 config 补上 |
 | 403 | token 错 | 重新读 config（可能改了） |
 | 503 | 服务没起 / 冷启动 | 等几秒重试 / 提示用户启动 |
-| 500 | 服务端 OOM | 降分辨率或步数 |
+| 504 | 生成超时（默认 900s 兜底） | 降分辨率/步数重试；若显存仍残留，重启服务进程 |
+| 500 | 服务端 OOM / image_b64 带 data: 前缀 | 降分辨率或去掉前缀 |
 
-## 性能预期（RTX 5080 17GB VRAM）
+## 性能预期（RTX 5080 17GB VRAM，sequential offload）
 
-- 1024² × 40 步 ≈ 100-110 秒（首张含冷启动 +20 秒）
-- 2048² × 40 步 ≈ 5-8 分钟（建议先 1024 验证 prompt）
+- 纯文本 1024² × 40 步 ≈ 4-5 分钟（约 6-8 秒/步）
+- 带参考图 1024² × 40 步 ≈ 6 分钟（约 8-9 秒/步）；512² × 20 步 ≈ 2 分钟
+- 2048² 会更慢（建议先 1024 验证 prompt）
 - 单卡同时只能跑一张，调用端可以并发请求，服务器自动排队
 
 ## 不该做的事
