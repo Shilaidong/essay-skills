@@ -24,7 +24,4 @@ tvly login --api-key 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
 # MiniMax CLI
 bash "$SCRIPT_DIR/minimax-cli/scripts/setup.sh"
 
-# SenseNova Skills (all 28 skills)
-bash "$SCRIPT_DIR/sensenova/scripts/setup.sh"
-
 echo "All skills installed and configured."
