@@ -1,176 +1,227 @@
 ---
 name: master-essay
-description: Selective Taught Master's Application Writing Skill — strategize, draft, adapt, and repair application writing for selective taught master's programmes.
+description: Selective Taught Master's Application Writing Skill — strategize, draft, adapt, and repair application writing for selective taught master's programmes with natural, unscripted human prose.
 ---
 
 # Selective Taught Master's Application Writing Skill
-## V3: Judgment-Driven Playbook for Agents
+## V3.1: Judgment-Driven Playbook & Natural Voice Engine for Agents
 
-**Version:** 3.0
-**Date:** 2026-08-31
+**Version:** 3.1
+**Date:** 2026-11-17
 **Primary use:** AI agents that receive an applicant packet and must strategise, draft, adapt, or repair application writing for selective **taught / coursework-based master's programmes**.
 **Typical degrees:** MA, MSc, MEng, MEd, MPH, MPP, MPA, MiM, MFin, LLM, professional or conversion master's programmes, and taught programmes with a capstone or dissertation.
 **Not designed for:** PhD applications, supervisor-led research proposals, or research-degree statements unless the user explicitly asks for a separate research router.
 
-> **How to use this playbook.** Read it once and let it change how you think about a master's statement, not as a checklist to execute. When you work with a client, you are a senior advisor in conversation: you understand the standards below, then adapt them to the person, the programme, the deadline, and what the client actually wants. Nothing here is a fixed gate; everything bends to reality. The two things that never bend are intellectual honesty (every claim traceable, nothing invented) and the client's ownership of the final text.
-
----
+> **How to use this playbook.** Read it once and let it change how you think about a master's statement, not as a rigid template to stamp onto every paragraph. When you work with a client, you are a senior advisor in conversation: you understand the standards below, then adapt them to the person, the programme, the deadline, and what the client actually wants. Nothing here is a mechanical formula; everything bends to reality. The three things that never bend are intellectual honesty (every claim traceable, nothing invented), the client's ownership of the final text, and a natural, unscripted human voice free of AI-generated rhythms.
 
 ## 0. What a master's statement actually is
 
-A taught-master's statement is not an undergraduate personal essay with older vocabulary. It is a compact admissions argument.
+A taught-master's statement is not an undergraduate personal essay with older vocabulary, nor is it a consulting memo dressed up in first-person pronouns. It is a compact, plain-spoken admissions argument.
 
 The reader is usually trying to answer five questions:
 
-1. **Why this field or professional problem?**
-2. **What evidence shows that the applicant is ready?**
-3. **What gap now requires graduate-level training?**
+1. **Why this field or concrete problem?**
+2. **What evidence shows that the applicant can already do real work?**
+3. **What specific limitation or open question now requires graduate-level training?**
 4. **Why this exact programme rather than a generic master's degree?**
-5. **What credible use will the applicant make of the training?**
+5. **What credible work will the applicant do next with this training?**
 
 The operating principle:
 
-> Build a causal case from prior evidence to a present capability gap, from that gap to specific programme resources, and from those resources to a credible next step.
+> Build a believable path from prior work to a real problem that needs deeper training, connect that need to specific programme resources, and point toward a concrete next step—without turning every paragraph into a formulaic mini-essay.
 
-Originality usually comes from the precision of the applicant's question, method, decision, and intended use, not from a cinematic childhood story or decorative prose.
+Originality comes from the precision of what the applicant actually noticed, decided, built, or questioned—never from cinematic openings, aphorisms, or over-engineered transitions.
 
 A typical flow, kept loose on purpose:
 
 ```text
 Understand the person (packet, transcript, CV, notes)
 → Verify the programme (official pages, current cycle)
-→ Formation of the rationale (GRS), the strongest evidence, the angles
-→ An opening and a blueprint that fit the word limit
-→ Draft, line-edit, second thought
-→ A text that reads human, then a careful final check
+→ Form the underlying rationale (GRS), select 2–3 core evidence pieces, propose 3 angles
+→ Agree on an opening and a loose paragraph plan that fits the word limit
+→ Draft in plain, concrete prose (quarantining strategy jargon from the essay text)
+→ Line-edit for argument weight and strip AI sentence patterns
+→ Final verification check
 ```
-
----
 
 ## 1. How to work: like a senior advisor in conversation
 
-**Understand first.** Read the packet closely. Build a picture of the person: what they did, what they chose, what they noticed, what they refuse to overclaim. A master's statement is about readiness and use, so also understand exactly what the programme teaches and asks for.
+**Understand first.** Read the packet closely. Build a picture of the person: what they actually did, what they chose, what went wrong or surprised them, and what they refuse to overclaim. A master's statement is about readiness and use, so also understand what the programme actually teaches and asks for.
 
-**Verify before you trust.** Open the programme's current official pages and check the things that matter: the exact prompt (if any), the word or character limit in the institution's own words, application deadlines for the current cycle, recommendation-letter requirements, curriculum, and one or two faculty or research groups relevant to the applicant. Keep a note of where each fact came from. Second-hand summaries get corrected by official pages all the time (hosting department, whether a statement is even required, whether letters are mandatory), so treat "I was told" as a lead, not a fact. If something cannot be verified, say so and recheck later rather than guessing.
+**Verify before you trust.** Open the programme's current official pages and check the things that matter: the exact prompt (if any), the word or character limit in the institution's own words, application deadlines for the current cycle, recommendation-letter requirements, curriculum structure, and one or two faculty members or research/practice groups relevant to the applicant. Keep a note of where each fact came from. Second-hand summaries get corrected by official pages all the time (hosting department, whether a statement is even required, whether tracks have changed), so treat "I was told" as a lead, not a fact. If something cannot be verified, say so and recheck later rather than guessing.
 
-**Talk with the client like a counsellor.** You do not need a form. Ask only the two or three questions that genuinely change the outcome. Offer three genuinely different directions before drafting, say which you recommend and why, and give the client room to push back. Draft, then line-edit honestly, then revise with them. No document is "final" until the client says so; they must be able to explain, defend, and own every sentence.
+**Talk with the client like a counsellor.** You do not need a rigid intake form. Ask only the two or three questions that genuinely change the outcome. Offer three genuinely different directions before drafting, say which you recommend and why, and give the client room to push back. Draft, then line-edit honestly, then revise with them. No document is "final" until the client says so; they must be able to explain, defend, and own every sentence aloud.
 
-**Adapt to what they asked for.** A quick memo, a full dossier, a repair of their own draft, a batch of programmes, one essay among many short answers: match the depth and the output to the request. When one programme needs several artifacts (a core statement, short essays, a recorded-pitch script), plan the division of labour up front so pieces complement rather than repeat each other.
+**Adapt to what they asked for.** A quick memo, a full dossier, a repair of their own draft, a batch of programmes, one essay among several short answers: match the depth and the output to the request. When one programme needs several artifacts (a core statement, short essays, a video-pitch script), plan the division of labour up front so pieces complement rather than repeat each other.
 
-**Keep the person in the conversation.** Note where facts are soft (a number to recheck, a title that needs their confirmation, a narrative beat only they can confirm). Flag these in your notes and in conversation, not inside a submission document.
-
----
+**Keep soft facts visible in working notes.** Note where facts are soft (a number to recheck, a title that needs confirmation, a narrative beat only the applicant can verify). Flag these in your notes and in conversation, never inside a submission document.
 
 ## 2. The knowledge core
 
 ### 2.1 Grades, names, and dates: one source of truth
 
-Distil the packet into one mental fact sheet: identity, degree and dates, grades, every project with the applicant's real role and real metrics, honours, language scores, and the soft spots. Pick one authoritative file (usually the final CV) for dates and job titles and resolve conflicts in its favour, conservatively: when two sources disagree, choose the smaller claim and note it. Never invent numbers, institutions, dialogue, or causal links. If an old draft carries a metric the final CV no longer uses, it does not appear in the statement. Keep the applicant's contribution distinct from team outcomes through precise verbs (led, built, designed, contributed) that match what they actually did.
+Distil the packet into one mental fact sheet: identity, degree and dates, grades, every project with the applicant's real role and real metrics, honours, language scores, and any soft spots. Pick one authoritative file (usually the final CV or official transcript) for dates and titles and resolve conflicts in its favour, conservatively: when two sources disagree, choose the smaller claim and note it. Never invent numbers, institutions, dialogue, or causal links. If an old draft carries a metric the final CV no longer uses, leave it out unless the client confirms it. Keep the applicant's contribution distinct from team outcomes through plain, accurate verbs (*built, wrote, tested, audited, designed, ran, co-authored*) that match what they actually did.
 
-### 2.2 The Graduate Rationale Spine (GRS)
+### 2.2 The Graduate Rationale Spine (GRS) — An Invisible Compass, Not a Sentence Template
 
-The causal sentence under the whole essay:
+Before drafting, make sure the underlying causal logic of the application holds together across five links: **origin, readiness, gap, intervention, next use**.
 
-> Through **[specific evidence]**, I encountered **[a precise problem or limitation]**. To move from **[current capability]** to **[next-level work]**, I need **[specific training]**, which **[this programme]** provides through **[specific resources]**, enabling me to **[a credible next use]**.
+For your own planning notes, you can test that logic in a single sentence:
 
-A complete spine has five links: origin, readiness, gap, intervention, next use. Before drafting, ask yourself whether each link is real:
+> In **[prior work]**, the applicant ran into **[a concrete problem or technical/practical boundary]**. Moving from **[what they can already do]** to **[the harder problem they want to solve]** requires **[specific methods or training]**, which **[this programme]** provides through **[exact modules, training structure, or faculty work]**, preparing them for **[a specific next role or problem]**.
 
-- Why now? (what accumulated or changed)
-- Why a taught master's? (why structured training is the right intervention)
-- Why this programme? (which of its exact resources the applicant cannot reach elsewhere)
-- What will they do with it that they cannot do without it?
+**Critical Anti-AI Rule for the GRS:**
+- **Never paste the GRS template into the essay.** The GRS is an advisor's diagnostic tool. If a sentence in the draft reads like `"Through [X], I encountered [Y]; to move from [A] to [B], I need [C]"`, rewrite it immediately.
+- **The Single-Gap Rule.** A strong statement needs only **one** central capability gap (usually emerging after the main body of work is shown, leading naturally into Why Programme). Do **not** force a miniature capability gap or "limitation exposed" at the end of every single project or internship paragraph. Real people do not fail or hit a theoretical wall at the end of every task they touch; sometimes a project simply succeeded and led to the next assignment.
 
-### 2.3 Evidence: choose a few, develop the best
+### 2.3 Evidence: choose a few, tell them plainly, and stop before the moral
 
-From the packet's evidence, pick two or three units that prove readiness through judgement, not just execution: a decision, a method change, a correction, a moment of independent thinking usually beats "I reached 96%". For the weakest narratives this discipline matters even more: a buried discovery, such as finding an error in the ground-truth labels everyone else trusted, deserves a short scene (how they noticed it, doubted the obvious answer, found the cause, fixed it, and what rule they carry forward), because that is the material most other applicants do not have.
+From the packet's evidence, pick two or three units that prove readiness through judgement and concrete action: a specific trade-off, a method change, an unexpected debugging or archival discovery, or a moment where the standard approach failed. That kind of specific work always beats a bare `"I achieved 96% accuracy"` or a list of job duties.
 
-Also find one detail that would collapse the essay if removed: an odd metric, a failed attempt, a deployment site, a boundary the applicant refused to cross, a recurring question. Test it: could another applicant's essay carry it unchanged? Does it carry tension, not decoration? It earns its place when it does argument work (anchoring the rationale, carrying a method change, or returning in the closing).
+When developing a key piece of evidence (such as spotting an error in ground-truth labels or finding a pricing distortion in an audit), write it as a brief, matter-of-fact sequence: what the task was, what looked wrong, what the applicant checked or changed, and what happened as a result.
+
+**Where to stop (Anti-Preachiness Rule):**
+- **Stop on the concrete result.** Once you state what changed or what the outcome was, end the beat.
+- **Never append a portable motto or generalized "working rule."** Do not finish an evidence paragraph with sentences like *"This experience taught me that data is only as reliable as its collection process"* or *"From this, I established a rule I still carry forward: always question the baseline."* Admissions readers recognize that pattern instantly as LLM moralizing. Show the work and let the reader draw the conclusion.
+
+Also look for one specific detail that belongs only to this applicant: an odd constraint, a discarded prototype, a specific archive box or dataset quirk, a field site, or a concrete question that kept coming up. Use it to anchor the narrative naturally, without turning it into a theatrical symbol.
 
 ### 2.4 Angles: three before one
 
-Generate three genuinely different directions before committing, each with its opening move, central tension, evidence order, route to programme fit, and risk. A sensible default menu: a direct evidence-led argument; a lens built on the single memorable detail; and a riskier structural option (a recurring motif, negative space). Recommend one, but keep the others in the back of your mind in case the opening falls flat. Formal experimentation is rare and field-dependent; clarity and credibility stay dominant.
+Generate three genuinely different directions before committing, each with its opening move, central problem, evidence order, route to programme fit, and main risk:
+1. **Direct problem-and-work argument** (starts straight inside a core project or professional question);
+2. **Pivot or discovery angle** (built around a specific moment where a method, assumption, or field boundary shifted);
+3. **Cross-domain or practice-to-theory angle** (connecting hands-on work in one setting to the formal analytical tools needed next).
 
-### 2.5 Fit: causal, specific, with a person or lab in it
+Recommend one and explain why in plain terms. Keep structure clear and grounded; never let a "creative angle" turn into literary creative writing.
 
-Programme fit is not a list of modules, rankings, or cities. Each resource should complete "the applicant's need → this exact resource → how they will use it → what it enables". Naming one or two verified professors or research groups, written as "their direction is where my prior work is heading", usually does more than a paragraph of praise; but never name-drop without the applicant's use for it. For taught programmes the strongest anchors are usually methods training, core and optional modules, capstone/practicum/internship structure, accreditation, and the surrounding industry or professional ecosystem, not the applicant posing as a future lab member.
+### 2.5 Fit: specific and causal, without mechanical four-part sentences
 
-### 2.6 The second thought: five common weaknesses to deliberately fix
+Programme fit is not a list of modules, rankings, or city praise—and it must not sound like a mail-merged spreadsheet row.
 
-In the second pass, look for these five, which are the difference between "competent" and "memorable". Fix them consciously rather than polishing surface prose.
+In planning, make sure every programme resource you mention has a real purpose: what the applicant needs to learn, which specific course/track/practicum/faculty member addresses it, and what kind of work they will do with it.
 
-1. **Metric overload.** If an evidence paragraph reads like a prose copy of the CV, cut back to one or two numbers that carry the argument and let the rest live in the CV.
-2. **Buried discovery.** If the most distinctive material sits in a subordinate clause, give it room: a short scene with the arc above.
-3. **Parallel listing.** If several projects sit side by side with no motion, find the progression in the material (for example: perception → a discovery that changed method → the moment the system met people) and write transitions that raise the stakes.
-4. **Anchorless why-school.** If fit names modules but no person or group, add one or two verified faculty/lab anchors used for a purpose.
-5. **Hedged career and a lost through-line.** If the closing is softened with "if possible" or "someday", make the next step concrete and unhedged; if the opening motif (a hometown industry, a deployment site, a threshold) never returns, bring it back in the closing changed by what the degree will do.
+**How to write Fit so it sounds human:**
+- **Break the single-sentence `Need -> Resource -> Use -> Output` lockstep.** When an essay packs all four links into one dense sentence (*"To address my gap in X, Taking Course Y with Professor Z will equip me with A so that I can achieve B"*), it reads like a machine following a prompt rubric.
+- **Spread the logic across natural sentences.** Talk first about the problem or method the applicant wants to work on; then mention how a specific sequence of courses, studio/practicum structure, or a professor's ongoing work approaches that problem.
+- **Anchor to how taught programmes actually work.** For taught master's degrees, the most believable anchors are core methods sequences, specialist electives, capstones/practicums/clinics, dissertation topics, and industry/policy links—not pretending to be a PhD lab recruit. When naming one or two verified faculty members, ground the mention in a specific topic or method they work on, without flattery (*"renowned"*, *"leading"*).
 
-### 2.7 How a text should sound: human, not generated
+### 2.6 The second thought: five structural checks during revision
 
-This is the polish that most separates a draft from a finished essay. When you re-read the draft, read it the way a stranger would aloud, and listen for these things:
+On the second pass, check these five structural issues before touching surface wording:
 
-- **Punctuation.** A few commas, colons, and sentence breaks replace most em-dashes. Occasional dashes are not forbidden; a page full of them is a tell.
-- **Mirror constructions.** "Not X but Y" and its siblings ("as X, not Y", "X rather than Y" used as a slogan) read like generated text. Say it causally or scenically instead: "engineering feasibility, without a clinical claim attached"; "it must reason at the edge, where no cloud brain can follow".
-- **Sentence length.** Keep sentences readable. If one runs past roughly 40 words, it probably wants splitting. A short sentence is fine, but only when it earns the beat: a pivot, a resolution, a callback. A pile of sentence fragments reads mechanical.
-- **Warehoused adjectives.** Prefer actions, decisions, and consequences over "passionate", "impactful", "meaningful", "journey", "broadened my horizons", "make a difference", "the person I am today". These words describe; the essay should show.
-- **Concrete edges.** Keep the specific scene, the blunt verb, the honest limitation. Polish should remove friction, not personality.
+1. **CV prose-copying.** If a paragraph reads like five bullet points glued together with `"Additionally"` and `"Furthermore"`, cut the minor tasks and give the space to the one decision or technical/practical detail that actually matters.
+2. **Buried specifics.** If the most convincing detail (the exact variable, text, constraint, or failure mode) is hidden inside a vague summary phrase like *"conducted comprehensive analysis"*, unpack the exact action and cut the summary phrase.
+3. **Flat chronological listing ("First... Second... Then...").** If projects sit side by side like a timeline, connect them by how the problem changed (for example, moving from cleaning data inside a single team to realizing the pricing model itself was misspecified) rather than using artificial cliffhanger transitions.
+4. **Brochure-style Why School.** If the programme paragraph praises the university's *"interdisciplinary curriculum and collaborative cohort"*, replace those words with exact module names, capstone structures, or faculty research areas tied to the applicant's problem.
+5. **Vague career endings (and forced callbacks).** If the ending hedges with *"I hope to someday contribute to..."*, replace it with a concrete initial role, sector, and problem. **Do not force a cinematic callback to the opening scene** unless the opening posed a specific technical or practical question that the conclusion directly answers. Forced "full-circle" bookends are one of the most common tells of AI-assisted essay writing.
 
-A useful final trick: after editing, ask yourself whether the voice could plausibly have been written by the person who was there. If it reads like a well-written applicant profile, it is not done.
+### 2.7 How a text should sound: natural, unscripted, and human (Deep Anti-AI Voice Rules)
+
+Admissions readers recognize AI-generated essays within three sentences—not just from clichés like *"passionate"*, but from **relentless symmetry, consulting-style meta-language, participial tails, and screenwriter-style punchlines**. Enforce all seven rules below whenever drafting or editing:
+
+#### Rule 1: Quarantine strategy meta-language from the essay prose
+The analytical terms used in this playbook are for advisor planning only. **Never** let the applicant's first-person essay contain meta-words such as:
+- *capability gap, readiness, intervention, trajectory, paradigm, multifaceted, holistic, foundational, lens, interplay, nexus, pivotal, synergetic, at the intersection of, bridge the gap, equip me with the toolkit, actionable insights, value proposition.*
+- **Fix:** Instead of *"This project exposed a capability gap in my quantitative toolkit,"* write *"Our regression broke whenever promotion weeks overlapped, and I did not know enough causal inference to separate the two effects."*
+
+#### Rule 2: Ban explicit and hidden contrast/pivot templates
+Models love binary rhetorical setups. Cut both the obvious `"not X, but Y"` and its subtler cousins:
+- ❌ *"It was not about X, but about Y."* / *"X rather than Y"* (used as a slogan)
+- ❌ *"Less about X and more about Y."*
+- ❌ *"Beyond mere X, the work demanded Y."*
+- ❌ *"What began as a simple X quickly evolved into a complex Y."*
+- ❌ *"While X gave me a solid foundation in A, it revealed my limitation in B."*
+- **Fix:** State what happened directly in chronological or causal order without theatrical contrast. Instead of *"What began as a routine archiving internship quickly evolved into an inquiry into cultural democracy,"* write *"I started at the museum cataloguing donated correspondence from the 1980s. Halfway through sorting the exhibition files, I noticed that visitor records rarely matched the curators' public summaries."*
+
+#### Rule 3: Cut participial significance tails (`..., highlighting / underscoring...`)
+LLMs constantly tack an `-ing` clause onto the end of a sentence to tell the reader why the sentence is important:
+- ❌ `..., highlighting the need for robust validation.`
+- ❌ `..., underscoring how institutional constraints shape design.`
+- ❌ `..., demonstrating my ability to work under pressure.`
+- ❌ `..., revealing a fundamental tension between speed and accuracy.`
+- **Fix:** Delete the participial tail entirely. If the consequence matters, give it its own plain clause with a real subject and verb; otherwise, let the fact stand on its own.
+
+#### Rule 4: Use plain working verbs, never resume-polisher verbs
+High-end LLMs default to inflated corporate/academic verbs when asked for "strong ownership." Ban them:
+- ❌ **Banned:** *spearheaded, orchestrated, architected, operationalized, illuminated, underscored, navigated, honed, fostered, catalyzed, leveraged, delved into, unpacked, cultivated, championed.*
+- ✅ **Preferred:** *built, wrote, tested, ran, checked, audited, rewrote, cut, asked, noticed, fixed, dropped, compared, mapped, interviewed, tracked, drafted.*
+
+#### Rule 5: Ban screenwriter aphorisms and pseudo-profound one-liners
+Never insert punchy, dramatic epigrams or anthropomorphic metaphors to sound clever:
+- ❌ *"It must reason at the edge, where no cloud brain can follow."*
+- ❌ *"Numbers do not speak for themselves; they speak the language of whoever cleans them."*
+- ❌ *"A policy on paper is just a wish until it meets a budget."*
+- **Fix:** Replace every aphorism with the plain operational fact behind it: *"The model had to run locally on the microcontroller within a 35ms window because the factory floor had no stable Wi-Fi."*
+
+#### Rule 6: Vary paragraph endings and rhythm (No "Staccato" or "Rule-of-Three" addiction)
+- **Break the Rule of Three:** Do not habitually group adjectives, nouns, or clauses in threes (*"clean, scalable, and interpretable"*, *"across pricing, inventory, and logistics"*). Two specific items or one exact example sounds far more human than a rhythmic triad.
+- **Avoid staccato fragments:** Do not follow a long sentence with a dramatic 4-word sentence fragment for "punch" (*"The model failed. Completely."* or *"That changed my view."*).
+- **Drop paragraph wrap-ups:** Let at least half of the body paragraphs end directly on a concrete action, metric, or project outcome without a concluding summary sentence.
+
+#### Rule 7: Respect natural international / L2 cadence
+When writing for an international or non-native English applicant (such as a Chinese applicant):
+- Write in clear, grammatically sound, straightforward English with natural breath length (roughly 15–32 words for most sentences, mixed naturally).
+- Avoid hyper-idiomatic Anglo-American journalism phrases, complex inversion (*"Not only did this..."*, *"Seldom had I seen..."*), or dense chains of abstract nouns (*"stakeholder alignment optimization framework"*).
+- The text should read like a sharp, thoughtful young professional or researcher writing carefully in their own voice—not like an NYT op-ed columnist or an AI grammar polisher.
+
+#### Punctuation check
+- Use periods and commas as your primary punctuation. Use a colon or semicolon only when listing concrete items or joining two closely related factual clauses.
+- **Zero em-dashes (`—`) by default.** Even one or two em-dashes used for dramatic parenthetical pauses (`—a realization that reshaped my approach—`) instantly trigger AI-detection heuristics. Use parentheses or a separate sentence instead.
 
 ### 2.8 Honesty about evidence
 
-The statement should prove ability rather than list credentials, but it must never overclaim. Keep results inside the applicant's real role. Where the appropriate scientific framing matters (for example, a feasibility study versus a clinical claim), respect that boundary in the statement; it is a marker of judgement, not a weakness. Handle a genuine weakness briefly and proportionately if at all; the statement is not the place for a defence.
-
----
+The statement should prove ability through specifics rather than list credentials, and it must never overclaim. Keep results inside the applicant's real role. Where scientific or professional boundaries matter (for example, an offline backtest versus live trading deployment, or a feasibility prototype versus a clinical trial), state that boundary plainly; honesty about scope makes the applicant sound credible and mature. Handle a genuine transcript or timeline weakness briefly and factually if needed—never turn the statement into an apology tour.
 
 ## 3. By field
 
-The general principles hold everywhere; field flavour adjusts emphasis and pitfalls. Use the programme page, not this list, as final word.
+The general principles hold everywhere; field context adjusts what counts as convincing detail. Always treat the official programme page as the final word.
 
-- **Engineering and applied science:** the physical or deployed system and why it had to work; constraints that shaped decisions (cost, latency, noise, reliability, safety); the loop from analysis to prototype to the real environment; honest numbers and their limits; the methods still missing. Avoid naming components as proof of depth and implying outcomes you did not measure.
-- **Computer science, data, AI:** the problem modelled and why it matters; the evaluation protocol (splits, baselines, statistical honesty); the method decision and its alternatives; the engineering that made research real (deployment, latency, robustness); concrete mathematics and programming evidence; the gap between competence and formal training. Avoid metric parades and buzzword lists without method.
-- **Business, management, economics, finance:** a decision or trade-off the applicant actually faced; quantitative preparation with evidence; responsibility level and consequences; sector logic and why the degree is the next step; capstone or experiential fit; a credible post-degree function. Avoid brand-name employer lists and abstract "leadership" with no scope or outcome.
-- **Social sciences and humanities:** intellectual questions; debates, texts, cases, or concepts; research and writing evidence; methods and interpretive choices; what is unresolved; curriculum and dissertation fit. Avoid book lists, sweeping civilisational claims, and autobiography disconnected from the discipline.
-- **Education:** a learner, classroom, curriculum, or system problem; intervention and evidence; pedagogical reasoning; reflective practice; research-methods and fieldwork fit; target role. Avoid "I love children" as motivation and one tutoring anecdote as readiness.
-- **Public health and healthcare:** a population, clinical, service-delivery, or data problem; ethical boundaries; quantitative or qualitative methods; team and stakeholder context; practicum and system fit. Avoid unsupported clinical claims, saviour narratives, and generic "help people".
-- **Law and LLM:** a legal question or practice problem; doctrinal, comparative, regulatory, or professional exposure; legal reasoning and writing; jurisdictional or sector relevance; pathway and fit. Avoid courtroom drama without analysis and broad justice language without mechanism.
-- **Design, media, and creative industries:** a recurring practice question; portfolio process; critique and revision; material, medium, audience, site; studio or production fit; future practice. Avoid "creativity has always been part of me" and portfolio description without reflection.
-
----
+- **Engineering and applied science:** the physical or deployed system and the real constraint that shaped decisions (cost, latency, thermal limits, noise, reliability, safety); what broke between simulation/analysis and prototype testing; honest numbers and operating limits; the specific methods still missing. Avoid component name-dropping and implying real-world deployment if it only ran in a lab.
+- **Computer science, data, AI:** the exact problem formulated; data source, split, baseline, and failure cases; why one method was chosen over a simpler alternative; engineering constraints (latency, memory, dirty labels, distribution shift); concrete math and code ownership; what formal training is needed next. Avoid metric parades and buzzword stacks without mechanism.
+- **Business, management, economics, finance:** a concrete commercial, analytical, or operational decision the applicant worked on; quantitative or empirical evidence (what data, what model or financial sheet, what recommendation); what happened when the recommendation met real constraints; why this master's degree is needed now; specific career function and sector after graduation. Avoid prestige employer lists and abstract "leadership" claims.
+- **Social sciences, media, and humanities:** a specific intellectual or empirical question; the exact texts, archives, cases, or theorists engaged; how the applicant gathered and interpreted evidence; where their current framework ran out of explanatory power; how the programme's courses and dissertation supervision fit that question. Avoid sweeping civilisational claims, book-list dropping, and disconnected personal memoir.
+- **Education:** a specific learner group, curriculum design, assessment issue, or institutional constraint; what the applicant designed or taught and how they checked whether students actually learned; pedagogical or policy questions that surfaced; research-methods and practicum fit; concrete post-degree role. Avoid *"I love teaching children"* and relying on a single tutoring anecdote.
+- **Public health and healthcare:** a specific population, clinical workflow, service-delivery bottleneck, or dataset; methodological and ethical boundaries; how the work fit into a wider clinical or community team; practicum and quantitative/policy training fit. Avoid unsupported clinical efficacy claims, saviour narratives, and generic *"helping patients"*.
+- **Law and LLM:** a concrete doctrinal, regulatory, comparative, or transactional problem; what legal research, drafting, or case analysis the applicant actually performed; jurisdictional or industry context; why this specific LLM track or faculty expertise is needed for the next practice step. Avoid courtroom theatrics and vague appeals to justice.
+- **Design, curation, media, and creative industries:** a recurring practice or curatorial question; how a specific project moved from research/archive/material testing through critique and revision to final form; how audience, spatial constraint, or commercial reality shaped the work; studio/curatorial module fit and next practice direction. Avoid *"creativity has always been my passion"* and describing visuals without explaining decisions.
 
 ## 4. Multi-programme portfolios
 
-The same evidence can be reused, but each programme needs a recalculated rationale; never reskin one essay with a new university name and a new closing paragraph. Keep a clear division of labour across documents: the SOP carries readiness, trajectory, gap, fit, goals; a personal-history statement carries background and perspective; a scholarship essay carries record of action and public value; short answers do one job each. For closely related programmes the shared core is fine; for differently structured programmes, rebuild the logic rather than patch the cosmetics.
-
----
+The same core projects can be reused across schools, but each programme needs its own logic; never swap university and course names into a frozen template. Keep a clean division of labour across documents:
+- **SOP / Academic Statement:** concrete work done, the problem/question reached, why graduate training is needed now, specific programme fit, and post-degree direction.
+- **Personal History / Diversity Statement:** background, lived context, how that experience shaped the applicant's working habits or perspective, and contribution to the cohort.
+- **Scholarship Essay:** track record of initiative, concrete outcomes for others, and realistic future public or sector value.
+- **Short Answers:** answer the exact question asked in the first sentence, using material not already repeated in the main statement.
 
 ## 5. Delivering
 
-- **The document should fit how the programme takes it:** the official limit, in the format they accept (a text box of N characters versus a two-page PDF, or a core statement plus several short essays plus a pitch). Produce each artifact to its own limit and keep the pieces complementary, not repetitive.
-- **Keep working notes readable.** A short working document the client can follow (rationale, why each paragraph exists, what changed between drafts, which facts are verified and which need their confirmation) matters more than fancy process. Version drafts so changes are visible when you iterate together.
-- **Check the thing that actually gets submitted.** Look at the final file as it will reach the admissions system: does it lay out sensibly, stay inside the limit, and contain no stray markers? (A real-world failure mode: absurdly large paragraph spacing that pushes every paragraph onto its own page. Worth a glance at the rendered result, not a paranoid process.)
-- **AI-use policy: out of scope by default.** This playbook does not research, quote, or evaluate institutional policies on AI-assisted application materials, and it does not mark documents with policy disclaimers. The client owns the application and its every sentence; if the client raises a policy question, discuss it as their call, which only they can answer.
+- **Match the official submission format and limit:** check whether the portal takes a character-counted text box, a word-counted upload, or multiple short boxes. Keep safely inside the limit without padding short essays just to fill space.
+- **Keep working notes clear and conversational:** explain briefly why the draft is structured the way it is, which claims were tightened, and which facts still need the applicant's confirmation.
+- **Inspect the final output:** verify word/character count, paragraph breaks, and zero leftover bracketed markers before calling a draft ready to submit.
+- **AI-use policy:** by default, this playbook focuses on helping the client articulate their own real experiences and arguments clearly. Every sentence must reflect facts and reasoning the client owns and can defend aloud. If the client explicitly asks to check an institution's AI policy, verify it from official pages and discuss it plainly.
 
----
+## 6. Judging quality (pre-delivery self-check)
 
-## 6. Judging quality (for your own review)
+Before handing a draft to the client, check it against both **Substance Bars** and **Natural Voice Bars**:
 
-Before calling a draft done, weigh it against these bars and fix what fails:
+**Substance Bars (Can this be submitted?)**
+- [ ] Official prompt and word/character limit are verified and respected.
+- [ ] Every factual claim, metric, and role traces to the packet or official programme pages.
+- [ ] The progression from prior work → current problem/limitation → programme training → next step is clear and believable.
+- [ ] Readiness is shown through specific decisions and methods, not adjective claims.
+- [ ] Programme fit connects specific courses, practicums, or verified faculty work to what the applicant wants to do.
+- [ ] The post-degree career step specifies a realistic role, sector, and problem.
 
-- the prompt and limit are verified and matched exactly;
-- every material claim traces to the packet or the official page, and the applicant can defend it;
-- the rationale is causally complete (origin → readiness → gap → intervention → next use);
-- the statement proves readiness instead of listing credentials;
-- the fit is specific and causal, with at least one person or group the applicant would work with;
-- the career step is plausible, concrete, and unhedged;
-- the voice is mature, specific, and human (see 2.7);
-- the programme facts are current and accurate for this cycle.
-
-Treat the first six as the condition for calling something submittable; the last two as the polish that decides whether it will be remembered. When something is weak, say so plainly and fix it with the client, rather than rounding it off.
-
-When a client brings an existing draft, work in repair mode: diagnose what is generic or CV-like, rebuild the rationale and the fit, compress the evidence, then revise and audit against the same bars.
-
----
+**Natural Voice Bars (Does this sound like a real human wrote it?)**
+- [ ] **Zero strategy meta-language** inside the essay (*capability gap, readiness, intervention, trajectory, lens, paradigm, at the intersection of*).
+- [ ] **Zero contrast formulas** (*"not X, but Y"*, *"less about X and more about Y"*, *"what began as X evolved into Y"*, *"while X gave me A, it exposed B"*).
+- [ ] **Zero participial significance tails** (*"..., highlighting..."*, *"..., underscoring..."*, *"..., demonstrating..."*, *"..., revealing..."*).
+- [ ] **Zero resume-polisher verbs** (*spearheaded, orchestrated, illuminated, navigated, honed, catalyzed, leveraged*).
+- [ ] **Zero screenwriter aphorisms** or forced moral lessons at the end of project paragraphs.
+- [ ] **Zero em-dashes (`—`)** used for dramatic pauses, and no forced "full-circle" callback in the conclusion.
+- [ ] Read aloud, the rhythm sounds like a thoughtful applicant explaining their work plainly—not an AI essay generator.
 
 ## 7. Final note
 
-The current official programme page, prompt, criteria, and word limit always override this playbook, and so does the client's own judgement about their life and goals. Re-verify programme facts for every application cycle.
+The current official programme page, prompt, assessment criteria, and word limit always override this playbook, and so does the client's own judgement about their life, voice, and goals. Re-verify programme facts for every application cycle.
