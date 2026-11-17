@@ -18,13 +18,10 @@ V3.1 的核心变化（2026-09-03）：
 ```text
 关卡制执行：每步停一下，选方向后强制 STOP，不许跳步写正文
 强制对话：三个方向 + 推荐理由 + 请学生拍板，稿子由学生确认才算数
-强制核实：涉及学校的文书，动笔前用 ego-browser（ego-lite）打开官方页面核实
+强制核实：涉及学校的文书，动笔前用 ego-browser (ego-lite) 打开官方页面核实
 docx 交付：默认输出 docx，并做渲染检查（排版/字数/无残留标记）
 多平台重合规则：学生故事与主线可共享；各校自己的文书逐校重写、逐校核实
 ```
-
----
-
 ## 1. 三个文件分别是什么
 
 压缩包里有三个文件：
@@ -51,7 +48,7 @@ operation_guide_cn.md
 - Creative Risk Ladder；
 - tiered final audit；
 - 关卡制执行与强制对话；
-- ego-browser（ego-lite）官方信息核实；
+- ego-browser (ego-lite) 官方信息核实；
 - docx 交付与渲染检查；
 - 多平台重合规则。
 
@@ -72,9 +69,6 @@ operation_guide_cn.md
 给你或顾问团队看的中文操作指南。
 
 重点是判断标准，不只是复制粘贴方法。
-
----
-
 ## 2. 最推荐的使用方式
 
 ### Step 1：先加载 skill
@@ -116,9 +110,6 @@ Verification Needs
 
 - **方向关卡**：输出完 Quick Dossier 必须停下，等学生选方向。Agent 不许在同一轮里接着写正文，不许自己挑一个方向闷头往下冲；只有学生明确写 `auto-select and continue`，才允许它一路写到草稿。
 - **强制对话**：给出三个角度时，Agent 必须说明它推荐哪个、为什么，并明确请学生换一个、混搭或全部推翻——而不是列完三个选项就觉得完成了。选择定下来之前，正文一个字都不写。
-
----
-
 ## 3. Quick Dossier 怎么判断好坏
 
 第一轮你只看五件事。
@@ -145,13 +136,13 @@ Verification Needs
 
 弱的 SMID 通常是：
 
-- “my passion for biology”；
-- “helping others”；
-- “my leadership experience”；
-- “winning the competition”；
-- “overcoming challenges”；
-- “environmental protection”；
-- “community service”。
+- "my passion for biology"；
+- "helping others"；
+- "my leadership experience"；
+- "winning the competition"；
+- "overcoming challenges"；
+- "environmental protection"；
+- "community service"。
 
 ### 3.2 SMID 是否能支撑结构
 
@@ -173,6 +164,8 @@ Friction or pressure
 Method change
 Ending callback
 ```
+
+*(防千人一面提醒：这四拍是结构支撑测试，绝不等于让所有学生都去演同一个“一开始控制欲太强→犯错后改写 checklist→结尾看着物件感悟人生”的剧本。必须贴合访谈中学生真实的性格——技术宅可以是纯技术试错，冷幽默观察者可以是观察视角的微调；结尾 Callback 必须停留在日常真实动作上，严禁把物件升华成象征隐喻，如“这本笔记不再只是……而是……”。)*
 
 如果没有，回复：
 
@@ -238,11 +231,8 @@ Common App 650 词默认 5–6 段，不要强迫 7–8 段。
 如果每段都像任务清单，回复：
 
 ```text
-Simplify the blueprint to 5–6 paragraphs. Remove checklist pressure. Let each paragraph do one narrative job.
+Simplify the blueprint to 5-6 paragraphs. Remove checklist pressure. Let each paragraph do one narrative job.
 ```
-
----
-
 ## 4. 什么时候触发 Insufficient Scene Evidence Alert
 
 V3 给了具体标准。以下情况满足两个以上，就应该触发：
@@ -264,9 +254,6 @@ What did you first misread, over-control, rush, or ignore?
 What did you stop doing after the experience?
 What ordinary scene repeats in this story?
 ```
-
----
-
 ## 5. Risk Ladder 什么时候用
 
 V2 的 Risk Ladder 好用，但时机不清楚。V3 固定三个触发点。
@@ -314,9 +301,6 @@ Agent 不应该夸张事实，而应该增加结构风险，比如：
 - 直接解释 → 让 callback 承载意义。
 
 如果素材不支持，它应该拒绝硬上更花哨的形式。
-
----
-
 ## 6. Full Dossier 什么时候用
 
 默认不用 Full Dossier。
@@ -337,9 +321,6 @@ Full Creative Dossier.
 ```
 
 Full 模式会输出更多内容：Evidence Ledger、至少 5 个 SMID、China Audit、Voice Bootstrap、Formal Play Matrix、10 个角度等。
-
----
-
 ## 7. Voice Construction 怎么看
 
 V3 保留了 Voice Construction，但 Quick 模式只输出 Voice Capsule。
@@ -352,8 +333,13 @@ Decision tempo
 Emotional temperature
 Sentence tendency
 Vocabulary domains
-What to avoid
+Verbatim student quotes / speech habits from interview or packet (2-3 anchors)
+Spoken-cadence rule & Say-It-Aloud ceiling (what adult/MFA habits to avoid)
 ```
+
+**怎么避免“所有学生写出来都是同一种文学编辑腔”：**
+- 要求 Agent 必须从学生的访谈记录（Transcript）、沟通笔记或旧稿里直接抓 **2–3 句原话或口头表达习惯**。哪怕访谈是中文，也要先把学生原本的说话方式（比如是“直球算账型”、“冷幽默吐槽型”、“爱自我纠正型”还是“慢热细抠型”）锚定下来，转成对应句长和直白度的英文。
+- 严格执行 **“17 岁脱口而出测试（Say-It-Aloud Test）”**：学生自己在面试里读不顺口、说不出来的 MFA 文学动词（如 *tethered, etched, hummed, cradled, punctuated*）和拟人修辞（如“表格盯着我”、“小提琴低吟”），一律不准上稿。
 
 如果你要求 Full Voice Bootstrap，三个 80 词声音样本必须在至少两个轴上明显不同，尤其是：
 
@@ -369,9 +355,6 @@ The three voice samples are not meaningfully different. Re-run Voice Bootstrap. 
 ```
 
 不要让 Agent 用 slang 假装高中生。
-
----
-
 ## 8. 中国学生素材怎么处理
 
 同质化素材不是问题本身，写法才是问题。
@@ -400,9 +383,6 @@ Would the essay still work if all awards were removed?
 ```text
 Run China-context differentiation again. Remove the achievement arc. Find the private system, misread, institutional friction, anti-rank choice, or quiet care that makes this student specific.
 ```
-
----
-
 ## 9. 方向确认后怎么让它写正文
 
 当你喜欢某个方向时，直接说：
@@ -422,9 +402,6 @@ Use the recommended direction. Draft 1, Line Edit, Draft 2, and Tiered Final Sel
 ```text
 Auto-select the strongest direction and continue to Draft 1, Line Edit, Draft 2, and Tiered Final Self-Audit.
 ```
-
----
-
 ## 10. 红黄绿 Final Self-Audit 怎么用
 
 V3 不再把所有检查项平铺。它分成三层。
@@ -444,10 +421,10 @@ V3 不再把所有检查项平铺。它分成三层。
 
 这些不一定致命，但会明显影响质量：
 
-- Voice；
+- Voice（是否真正贴合该学生访谈中的说话习惯、通过 Say-It-Aloud 测试，而非千人一面的成年编辑腔）；
 - Scene density；
 - China-context differentiation；
-- Ending；
+- Ending（是否停在具体动作上，没有给物件强加象征升华）；
 - Portfolio value。
 
 ### 🟢 可选优化
@@ -455,15 +432,12 @@ V3 不再把所有检查项平铺。它分成三层。
 这些是最后润色：
 
 - Rhythm；
-- Anti-AI language；
+- Anti-AI language（除常规套话外，重点清查物件拟人、MFA 文学动词、`"not X, but Y"` 对比句、句末 `-ing` 拔高尾巴与破折号插入语；同时保留高中生自然的口语连接词和实在想法，避免演默剧）；
 - Formal play；
 - Compression；
 - Callback precision。
 
 你审稿时先看红项，不要被绿色小问题分散注意力。
-
----
-
 ## 11. 常用命令模板
 
 ### 11.1 最短启动模板
@@ -535,9 +509,6 @@ Verify the school facts for [essay / school] with ego-browser before drafting. S
 ```text
 Produce the final artifacts as separate docx files and run the rendered-output check (layout, limits, no stray markers).
 ```
-
----
-
 ## 12. 什么时候这套系统会失效
 
 这套系统不是魔法。以下情况要人工介入：
@@ -559,29 +530,23 @@ Produce the final artifacts as separate docx files and run the rendered-output c
 ```
 
 如果不像，方向不对。
-
----
-
 ## 13. 建议参数
 
 | 任务 | temperature 建议 |
 |---|---:|
-| Quick Dossier / 角度探索 | 1.2–1.7 |
-| Full Dossier | 1.0–1.5 |
-| Draft 1 | 1.0–1.4 |
-| Draft 2 / 去 AI 味 | 0.7–1.1 |
-| UC PIQ | 0.6–1.0 |
-| Why School / Why Major | 0.4–0.8 |
-| Final Self-Audit | 0.2–0.5 |
+| Quick Dossier / 角度探索 | 1.2-1.7 |
+| Full Dossier | 1.0-1.5 |
+| Draft 1 | 1.0-1.4 |
+| Draft 2 / 去 AI 味 | 0.7-1.1 |
+| UC PIQ | 0.6-1.0 |
+| Why School / Why Major | 0.4-0.8 |
+| Final Self-Audit | 0.2-0.5 |
 
 如果平台不能设置 temperature，就在 prompt 里写：
 
 ```text
 Write with high structural creativity but strict factual grounding.
 ```
-
----
-
 ## 14. V3.1 新增：关卡、对话、核实、交付、多平台重合规则
 
 ### 14.1 执行关卡：一步一步来，选好方向再动笔
@@ -600,7 +565,7 @@ Write with high structural creativity but strict factual grounding.
 
 ### 14.3 强制核实：写到学校，先开 ego-browser 查官方
 
-- **凡涉及学校具体事实的文书（Why School、Why Major、其他学校专属补充文书），动笔前必须用 ego-browser（ego-lite，Mac 强制）打开该校当前官方页面核实**：官方题目原文、官方原话字数/字符限制、本轮截止、课程/实验室/教授名字等。每个事实记来源。
+- **凡涉及学校具体事实的文书（Why School、Why Major、其他学校专属补充文书），动笔前必须用 ego-browser (ego-lite，Mac 强制) 打开该校当前官方页面核实**：官方题目原文、官方原话字数/字符限制、本轮截止、课程/实验室/教授名字等。每个事实记来源。
 - 纯主文书若不提学校，不强查学校页，但题目和字数仍要确认。
 - 核不实的写进待核清单或 `[VERIFY]` 笔记，绝不进草稿，更不许猜。
 - 提交前把学校相关事实再对一遍当前官方页（课程、截止、教职每年都在变）。
